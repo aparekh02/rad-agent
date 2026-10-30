@@ -1,0 +1,279 @@
+replaying 54,001 ticks (90 sim-min) at 20x ≈ 270s wall
+
+[  8.11s] round 0 @ sim 12:00 UTC (+0 findings, 0 alerts, data age ≤0.99s)
+VIEW: First round at 12:00:59 UTC, and all three books are quiet: vol_x_ref is 0.73-0.80 with peaks of 1.0-1.3x, and |P_z| is under 1 everywhere. US CPI is scheduled for 12:30 UTC, which is about 29 minutes away and well outside the next 5-minute window.
+RISK: I would widen if vol_x_ref holds above 1.5x or a disorderly move with |P_z| above 2-3 develops, or if any CPI leak or headline appears. I plan to move to widen around 12:25-12:26 so I am positioned before the 12:30 release.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: What is the consensus versus whisper estimate for headline and core CPI, and how have BTC, ETH and SOL perpetuals realized vol over the first 1, 5 and 15 minutes after recent CPI prints?
+
+[ 15.23s] round 1 @ sim 12:02 UTC (+0 findings, 0 alerts, data age ≤1.60s)
+VIEW: Since 12:00:59 BTC and ETH drifted up about 12-14 bps in an orderly way. Vol is subdued: vol_x_ref is 0.41-0.88 and no symbol peaked above 1.0x. BTC P_z reached +2.7, which is mild one-sided buying, but vol is 0.46x and decelerating (d2P≈0), so it is not disorderly; CPI at 12:30 is still about 27 minutes away.
+RISK: I would widen if vol_x_ref climbs above about 1.5x on any symbol, if BTC P_z keeps building past about 4 with move_z expanding, or if a CPI leak or headline appears. The scheduled CPI pre-positioning only comes into the window from about 12:25.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: How far ahead of the CPI release do BTC/ETH perp spreads and vol usually start to rise, to set the widen trigger time?
+
+[ 23.41s] round 2 @ sim 12:04 UTC (+4 findings, 1 alerts, data age ≤2.72s)
+VIEW: SOL jumped about +26 bps in the last minute, with vol peaking at 3.1x ref and still 1.56x now; this happened without BTC or ETH following. BTC and ETH stayed orderly (vol 0.39-0.59x now, BTC peaked at 1.5x briefly), and their P_z values are within noise. CPI is still about 25 minutes away, so there is no event risk yet.
+
+RISK: I would return SOL to normal if its vol_x_ref falls below ~1.2x and the move stalls or retraces calmly next round. I would flatten SOL if vol climbs further with |P_z| above 2 or the move extends disorderly. I would widen BTC or ETH if they start to follow SOL with vol above 1.5x, and I will widen everything from about 12:25 ahead of CPI.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: Do idiosyncratic SOL spikes (more than 20 bps in 60s, with no BTC or ETH move) tend to keep going, reverse, or settle down within 5 minutes on Binance perps?
+
+[ 34.68s] round 3 @ sim 12:07 UTC (+2 findings, 1 alerts, data age ≤1.89s)
+VIEW: The SOL-only move has become a broad selloff. In two minutes BTC is down 27 bps, ETH 45 bps and SOL 83 bps, with vol peaking at 2.1-2.7x across all three. ETH is still elevated at 1.61x, and BTC's last chunk was a -3.3σ move even though its current vol has eased to 0.99x. Pressure has neutralised (|P_z| < 0.5) and dP is turning positive, so I see no new selling impulse. The move is still disorderly enough that I expect 1.5x+ vol over the next 5 minutes. CPI is about 22 minutes out, so it is not yet a factor. The CPI-consensus research describes a different release (Oct 2026) than today's sim event (Feb 2024), so I am ignoring it.
+
+RISK: If BTC and ETH vol stays below about 1.2x and ranges compress over the next round, I go back to normal on all three. I would flatten SOL, and possibly ETH, if P_z drops below -2.5 again or there is another >50 bps/60s alert, since that would suggest a liquidation cascade. The CPI widen window starts around 12:20.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: When a correlated crypto selloff like this hits 20-30 minutes before CPI, does vol usually stay elevated into the print, or mean-revert within 5 minutes? Separately, are perp liquidation and open-interest data showing forced selling right now?
+
+[ 44.90s] round 4 @ sim 12:11 UTC (+1 findings, 0 alerts, data age ≤1.15s)
+VIEW: The broad selloff has calmed. Current vol is back at or below reference (BTC 0.91x, ETH 0.68x, SOL 1.0x), and the 2.3-2.9x peaks are behind us, so BTC and ETH return to normal. SOL is the exception: its last chunk fell 22 bps (move_z -2.08) on fresh selling pressure (P_z -2.58, dP still negative). That is renewed SOL-specific selling, not leftover noise. CPI is 18 minutes out, so it is not yet a factor for the next 5 minutes.
+
+RISK: I would widen BTC and ETH if SOL's selling spreads to them again (BTC P_z below -2, or vol above 1.5x). I would flatten SOL if vol goes above 2x with continued pressure. I would return SOL to normal if pressure fades below |2| and vol stays near 1x. All three go to widen from about 12:25 for CPI.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: In the 15-30 minutes before a CPI release, does vol in BTC, ETH and SOL perps compress or build, and does pre-release order-flow pressure predict the direction of the move after the release?
+
+[ 51.85s] round 5 @ sim 12:14 UTC (+0 findings, 0 alerts, data age ≤2.36s)
+VIEW: SOL's selling has faded. Pressure is back to neutral (P_z +0.01 from -2.58), price recovered +9.7 bps, and current vol is 0.96x ref; the 1.8x peak was brief. BTC (0.25x) and ETH (0.72x) are quiet with ordinary pressure. CPI is 15 minutes out, past this 5-minute window, so all three return to normal.
+RISK: SOL vol back above 1.5x or P_z below -2 with another disorderly leg would bring back widen. Any cross-asset vol spike above 1.5x would also do it. Next round puts CPI within ~10 minutes; widen for the window that contains 12:30.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: What was the consensus vs. whisper for Feb 2024 CPI, and how large were BTC/ETH/SOL 5-minute realized vol multiples after recent CPI surprises?
+
+[ 63.18s] round 6 @ sim 12:17 UTC (+1 findings, 1 alerts, data age ≤0.31s)
+VIEW: A correlated selloff hit after the last round: BTC fell -17.3 bps in 60s (move_z -4.0, vol peak 3.4x), and SOL dropped -35.9 bps. BTC is still elevated at 2.07x ref, while ETH (1.17x) and SOL (1.2x) have already cooled below 1.5x, and pressure on all three is ordinary (P_z 1.2–1.4). CPI is 12 minutes out, past this window. The research suggests pre-CPI vol tends to stay bid, but that is an unquantified rule of thumb and its liquidation data is two days old, so I am not treating it as confirmation of forced selling.
+
+RISK: I would widen ETH/SOL if their vol_x_ref goes back above 1.5 or another move_z beyond ±3 alert fires. I would return BTC to normal if its vol drops below ~1.3x. All three should go to widen by the 12:25 round, when CPI falls inside the 5-minute window.
+
+STANCE: btc=widen eth=normal sol=normal
+
+RESEARCH: Is live open interest on BTC and SOL perps falling with this drop (deleveraging) or flat to rising (new shorts), per CoinGlass or Coinalyze right now?
+
+[ 71.39s] round 7 @ sim 12:20 UTC (+0 findings, 0 alerts, data age ≤2.63s)
+VIEW: BTC's elevated vol has fully decayed, now 0.71x ref versus 2.07x last round. The 2.1x peak was only intra-window, and the snapshot shows calm. ETH and SOL are also quiet at about 0.7x, and pressure everywhere is ordinary (|P_z| < 0.7), so SOL's -11.8 bps drift looks orderly, not disorderly. CPI at 12:30 is about 9 minutes out, beyond this 5-minute window (to ~12:26), so nothing justifies caution yet.
+RISK: vol_x_ref back above 1.5x or a renewed |move_z| > 3 selloff with |P_z| > 2 would flip me to widen. Next round lands within ~5 minutes of the 12:30 CPI print, so I expect to widen all three then.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: How early before past CPI releases does BTC/ETH/SOL vol_x_ref typically cross 1.5x (e.g., T-5 vs T-2 minutes), to time the pre-release widen?
+
+[ 81.26s] round 8 @ sim 12:23 UTC (+0 findings, 0 alerts, data age ≤1.84s)
+VIEW: CPI at 12:30:00 is now about 6 minutes out, so this 5-minute window (to ~12:29) ends just before the release. Vol is near reference (BTC 1.07x, ETH 0.90x, SOL 1.23x). Intra-window peaks were modest (SOL 1.9x, BTC 1.6x), and the BTC/SOL -2.2 move_z chunks came with ordinary pressure (|P_z| < 1). Nothing currently points to 1.5x+ vol before the print.
+
+RISK: I would widen if vol_x_ref rises to 1.5x or more, if |P_z| exceeds 2 (pre-release positioning or a leak), or if liquidity visibly thins. At the next round, CPI will be inside 5 minutes, and I expect to move to widen or flatten into the release.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: What is the consensus versus whisper number for Feb 2024 headline and core CPI, and how far did BTC move in the first 5 minutes after recent CPI surprises?
+
+[ 92.02s] round 9 @ sim 12:26 UTC (+0 findings, 4 alerts, data age ≤2.70s)
+VIEW: CPI at 12:30:00 is now about 3 minutes out, so the release falls inside this 5-minute window. Since last round there was a synchronized cross-asset drop (BTC/ETH/SOL move_z of -4.2 to -4.6 at 12:24:59), with vol peaks of 2.6–3.7x and SOL still elevated at 1.52x. The pre-release positioning plus the print itself make 1.5x+ vol very likely, and SOL is the most disorderly (78.9 bps range).
+RISK: If the CPI print is in line and vol settles below ~1.3x within a minute or two after 12:30, I return to normal. A large surprise, or vol above 3x with one-sided |P_z| > 2 after the print, would escalate BTC/ETH to flatten.
+STANCE: btc=widen eth=widen sol=flatten
+RESEARCH: How large was the post-release vol multiple, and how long did it decay, for BTC/ETH/SOL perps on the last several CPI prints, especially when a pre-release selloff happened in the minutes before?
+
+[ 98.99s] round 10 @ sim 12:30 UTC (+0 findings, 3 alerts, data age ≤1.46s)
+VIEW: CPI printed at 12:30:00 and all three are repricing sharply higher in a synchronized move: BTC +34.7 bps in 60s at 8.3x ref vol, ETH 3.9x, SOL 4.9x with a 140 bps range. Pressure is building across all three (P_z 2.1–2.4, dP still positive), so this looks like continuation of the post-release move rather than exhaustion.
+RISK: Vol_x_ref decaying toward 1.5x with P_z dropping back inside ±2 for a full chunk would bring BTC/ETH back to normal. A sharp reversal or gap with spreads blowing out would push them to flatten.
+STANCE: btc=flatten eth=widen sol=flatten
+RESEARCH: How quickly does BTC/ETH/SOL perp vol typically decay back below 1.5x ref after a CPI surprise, and does the first-minute direction tend to persist or retrace?
+
+[106.75s] round 11 @ sim 12:32 UTC (+0 findings, 6 alerts, data age ≤2.42s)
+VIEW: The post-CPI repricing has a second leg. BTC is up +56.9 bps in 60s (move_z 13.3) with vol peaking at 11.1x ref, and ETH and SOL each jumped about 42–60 bps at 3.5–7x ref. Pressure has cooled (P_z now 0.8/-0.2/1.0, below the noise threshold), so this is not flow-driven continuation. Vol is still far above 1.5x, though, and the 90–130 bps ranges show the move is still disorderly.
+RISK: I would step down if realized vol fades below ~2x on the next chunk with ranges narrowing (ETH first, since it is already at 3.6x and off its 7.1x peak). I would escalate ETH to flatten if BTC makes another double-digit move_z leg or pressure re-builds past |P_z| 2.
+STANCE: btc=flatten eth=widen sol=flatten
+RESEARCH: After past CPI surprises, how long has BTC/ETH/SOL realized vol taken to decay below 2x reference, and does a second leg 2–3 minutes post-release usually mark the peak?
+
+[113.79s] round 12 @ sim 12:35 UTC (+0 findings, 8 alerts, data age ≤1.17s)
+VIEW: About 6 minutes after CPI, BTC gave back the spike with a -49.8 bps flush at 11.5x ref and is now rebounding at 2.7x ref (move_z 3.4). SOL is still choppy at 2.2x ref with a 4.5x peak. ETH has calmed to 1.3x ref, though its peak was 1.9x. Pressure is ordinary noise on all three, so the moves are vol-driven whipsaw rather than one-sided flow, but BTC and SOL vol is still well above 1.5x.
+RISK: I would step BTC and SOL down to widen, or normal, if vol_x_ref drops below about 1.5x with no new range-expanding chunks. I would move ETH to widen, or BTC/SOL back to flatten, on another 50+ bps leg or if |P_z| goes above 2 with accelerating dP.
+STANCE: btc=widen eth=normal sol=widen
+RESEARCH: How long post-CPI vol stays above 1.5x ref in BTC/SOL perps, measured by the decay half-life of realized vol after the release.
+
+[120.49s] round 13 @ sim 12:37 UTC (+0 findings, 3 alerts, data age ≤2.20s)
+VIEW: About 8 minutes after CPI, BTC is still at 2.4x ref with a 3.5x peak in the last minute and a -13 bps move_z -3.1 leg. SOL is at 1.85x ref with a 4.2x peak and a -14.9 bps last chunk, so both are still running well above 1.5x. ETH is at 1.3x ref with a 2.6x peak, and its pressure is ordinary noise, so it stays normal.
+RISK: If BTC and SOL vol_x_ref drops below ~1.5x with peaks under 2x, I move them to normal. If a fresh one-sided flush appears (|P_z| > 2, or move_z beyond ±3 with vol >4x), I escalate to flatten. If ETH's current vol climbs back above 1.5x, I widen it.
+STANCE: btc=widen eth=normal sol=widen
+RESEARCH: How long does post-CPI realized vol in BTC and SOL perps typically stay above 1.5x reference, and does it decay faster after a full spike-and-reversal pattern?
+
+[131.52s] round 14 @ sim 12:39 UTC (+0 findings, 2 alerts, data age ≤2.90s)
+VIEW: Ten minutes after CPI, current vol has dropped (BTC 1.35x, SOL 1.44x ref), but the last minute still peaked at 2.6x and 2.5x. BTC went -18.9 bps then +18.3 bps in back-to-back minutes (move_z about 4.3 each), and SOL covered a 41 bps range, so the post-release swings have not settled and next-5-minute vol near or above 1.5x is still likely. ETH is at 1.09x ref with P_z of 0.56, so it stays normal.
+RISK: I return BTC and SOL to normal if the next minute's peak stays below about 1.5x ref and the chunk moves fall back under 2 sigma. I add ETH to widen if it starts swinging like BTC (move_z above 3 or vol peak above 2x). I escalate to flatten if a one-directional break shows up with |P_z| above 3 and an accelerating d2P.
+STANCE: btc=widen eth=normal sol=widen
+RESEARCH: After past CPI prints, how many minutes did BTC and SOL realized vol usually take to fall back under 1.5x reference, and does a two-sided whipsaw pattern at T+10 predict a slower decay?
+
+[138.90s] round 15 @ sim 12:43 UTC (+0 findings, 0 alerts, data age ≤1.92s)
+VIEW: About 14 minutes after CPI, vol has risen again rather than faded. BTC is at 2.13x ref with a 2.9x peak, SOL is at 1.58x with a +25.7 bps chunk (move_z 2.4), and the three-minute ranges are wide (BTC 38, SOL 73 bps) during a steady rally. ETH is now 1.23x with a 2.1x peak and a +34.8 bps drift, which is elevated but borderline, and its pressure is flat (P_z 0.2).
+
+RISK: If BTC and SOL vol_x_ref fall back below about 1.3x with chunk moves under 1 sigma, I would return them to normal. If ETH current vol goes above 1.5x or the rally turns into a sharp reversal, I would widen ETH. If any move_z goes above 4 with |P_z| above 2, I would consider flattening.
+
+STANCE: btc=widen eth=normal sol=widen
+
+RESEARCH: Does post-CPI crypto vol usually come back 10-20 minutes after the release (second wave, for example after the US equity open) or decay steadily, and how long does it stay above 1.5x ref?
+
+[147.63s] round 16 @ sim 12:46 UTC (+0 findings, 0 alerts, data age ≤0.30s)
+VIEW: Vol is fading about 17 minutes after CPI. BTC is back to 1.03x ref and ETH to 1.06x, with ordinary pressure (P_z near -0.5), although both touched 2.0-2.4x earlier in this window. SOL is still the outlier: 1.4x now, a 2.9x peak and a 51.7 bps two-minute range, so I expect it to stay near or above 1.5x for the next few minutes.
+
+RISK: Moving BTC or ETH off normal would take vol_x_ref back above ~1.5x, a fresh disorderly chunk (|move_z| above 2 with a wide range), or |P_z| building beyond 2. SOL goes back to normal if its vol_x_ref holds below ~1.2x with ranges narrowing.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: How long does SOL's elevated realized vol usually last after US CPI, compared with BTC/ETH, and does a second wave 15-20 minutes after the release usually happen?
+
+[155.44s] round 17 @ sim 12:49 UTC (+0 findings, 0 alerts, data age ≤0.02s)
+VIEW: About 20 minutes after CPI, BTC and ETH are calm at the snapshot (1.18x and 0.85x) with ordinary pressure, even though both spiked to 2.4x and 1.6x during the window. SOL is still disorderly: 1.57x now, a 37.8 bps last chunk (move_z 3.54) and a 67 bps two-minute range, wider than last round's 51.7 bps. I expect SOL to stay at or above 1.5x for the next few minutes.
+RISK: I would widen BTC or ETH if vol_x_ref goes back above 1.5x or |P_z| holds above 2 alongside another sharp move. I would return SOL to normal once vol_x_ref drops below about 1.3x and the chunk moves shrink to ordinary size.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: Is SOL's post-CPI overshoot coming from thin book depth or a liquidation cascade, and how long does SOL vol typically take to decay after US macro releases compared with BTC and ETH?
+
+[163.83s] round 18 @ sim 12:51 UTC (+0 findings, 0 alerts, data age ≤1.83s)
+VIEW: SOL is still disorderly at 1.61x, down 26.8 bps over the minute (39.5 bps range, move_z -2.14), so I keep it on widen. BTC has crept back up from 1.18x to 1.49x and peaked at 2.0x in the window, so post-CPI vol is flaring again, though there is no directional pressure (P_z near 0). ETH stays calm at 0.72x with a 1.3x peak.
+RISK: I return BTC to normal if its vol falls back toward ~1.2x with no further 2x spikes, and SOL if it drops below ~1.3x and its ranges compress. I flatten SOL if |P_z| breaks above 2 alongside another large move. I widen ETH if it follows SOL or BTC above 1.5x.
+STANCE: btc=widen eth=normal sol=widen
+RESEARCH: Is SOL's continued post-CPI selling driven by SOL-specific flow, such as liquidations or funding, rather than macro beta?
+
+[173.57s] round 19 @ sim 12:54 UTC (+0 findings, 0 alerts, data age ≤1.21s)
+VIEW: BTC has calmed to 0.99x from 1.49x and ETH sits at 0.65x, so 25 minutes after CPI their current vol no longer supports caution, even though the window had brief ~2x peaks. SOL is still jumpy: the last chunk fell 21.7 bps (move_z -2.03) inside a 44 bps range with a 2.1x peak. Its current 1.17x and flat pressure (P_z -0.36) keep it borderline, so I hold one more round of caution there.
+
+RISK: SOL vol at or below 1.1x with no further outsized chunks sends it back to normal. BTC or ETH back above 1.5x, or another sharp move with |P_z| > 2, would put them back on widen.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: Does SOL show a longer post-CPI vol tail than BTC and ETH, with bursts recurring 20-40 minutes after the release, and how long does it typically take to settle?
+
+[180.76s] round 20 @ sim 12:57 UTC (+0 findings, 0 alerts, data age ≤1.94s)
+VIEW: BTC and SOL have re-accelerated ~28 minutes after CPI. Both are at 1.65-1.67x reference, the last chunks moved +14 and +35 bps (move_z ~3.2), and window peaks reached 3.0x and 2.3x. This is a fresh directional leg, not decay, so next-5-minute vol of 1.5x+ is likely for both. ETH also rallied +17 bps, but its current vol is 1.19x with move_z 1.72 and flat pressure, which is below the caution threshold.
+
+RISK: If BTC and SOL vol drops back under ~1.3x with no follow-through, I go back to normal. If ETH vol climbs above 1.5x, or any |P_z| goes past 2 with rising dP, I widen ETH or escalate to flatten.
+
+STANCE: btc=widen eth=normal sol=widen
+
+RESEARCH: Is there a known catalyst for the ~12:56 BTC/SOL leg, such as a delayed CPI repricing, ETF flow headlines or large liquidations, or is it organic momentum?
+
+[190.36s] round 21 @ sim 13:00 UTC (+0 findings, 0 alerts, data age ≤0.12s)
+VIEW: The post-CPI rally has reversed. All three gave back 11-20 bps in the window, with vol peaks of 2.0-2.4x. BTC now shows strong one-sided selling (P_z -3.3, dP still negative, move_z -2.1) even though spot vol has cooled to 1.15x, so the down leg looks active rather than finished. SOL is still elevated at 1.52x (peak 2.1x). ETH has calmed to 0.89x with only noise-level pressure (P_z -1.9).
+
+RISK: I would return BTC to normal if its selling pressure fades (|P_z| < 2, dP turning up) and vol stays near 1x. I would return SOL to normal if its vol drops below ~1.3x without new large chunks. I would widen ETH if it follows BTC lower with vol above 1.5x or P_z beyond -3.
+
+STANCE: btc=widen eth=normal sol=widen
+
+RESEARCH: Do second-leg reversals ~30 minutes after CPI in crypto perps usually lead to further vol expansion, or do they fade within 5-10 minutes?
+
+[198.61s] round 22 @ sim 13:03 UTC (+0 findings, 0 alerts, data age ≤0.72s)
+VIEW: BTC's one-sided selling has faded: P_z swung from -3.3 to +0.14 and vol is back to 1.03x, although the last chunk still dropped 9 bps (move_z -2.2) inside a 2.0x peak. SOL has eased to 1.29x (peak 2.2x) with P_z of 1.5, which is still noise, and ETH is quiet at 0.56x. Thirty-four minutes after CPI, the post-release vol is decaying and no current reading points to 1.5x or more over the next 5 minutes.
+RISK: I would widen again if vol_x_ref goes back above 1.5x, if SOL's P_z holds above 2 with a directional move, or if BTC's down leg resumes with |P_z| above 3 and a new range break.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: How long does post-CPI realized vol in SOL typically stay above BTC and ETH, and do secondary vol spikes cluster 30-60 minutes after the release?
+
+[209.25s] round 23 @ sim 13:05 UTC (+0 findings, 0 alerts, data age ≤2.96s)
+VIEW: BTC drifted down 8.9 bps and briefly hit 1.5x vol, but it is back at 1.02x with P_z -1.1, so there is no one-sided pressure. SOL had a wide 38.7 bps range and peaked at 1.6x, but it now sits at 1.31x with ordinary P_z, and ETH is quiet at 0.81x. Thirty-six minutes after CPI, the post-release vol keeps fading and nothing points to 1.5x or more in the next 5 minutes.
+RISK: Widen if vol_x_ref holds above 1.5x on any symbol, if |P_z| goes past about 3 alongside a large move_z, or if the BTC downtrend speeds up into a disorderly break; SOL is the closest to that line.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does SOL's elevated range-to-vol ratio after CPI predict a second leg of vol 30–60 minutes after the release?
+
+[218.87s] round 24 @ sim 13:09 UTC (+0 findings, 3 alerts, data age ≤1.59s)
+VIEW: BTC is now the hot symbol: vol is at 1.67x (peak 1.9x), with a +8.7 bps last chunk at move_z 2.03, so it is elevated right now rather than fading. SOL saw a disorderly 56.8 bps range with a 5.2x spike and a -29 bps net move, and its last chunk still touched 1.68x. ETH's 3.8x burst has already died back to 0.81x with a max of 1.3x in the last chunk. P_z is ordinary everywhere, so these are vol bursts rather than one-sided flow, 40 minutes after CPI.
+RISK: I would return BTC to normal if its vol drops below about 1.3x with no further move_z above 2. I would return SOL to normal if its chunk max stays under 1.5x. I would widen ETH or escalate to flatten if any symbol shows |P_z| above 2 together with vol above 3x, or ETH re-spikes above 2x.
+STANCE: btc=widen eth=normal sol=widen
+RESEARCH: Is there a SOL-specific catalyst (liquidations, a protocol or exchange event) behind the 5.2x spike that diverged from the BTC and ETH direction around 13:07?
+
+[228.37s] round 25 @ sim 13:12 UTC (+0 findings, 0 alerts, data age ≤2.21s)
+VIEW: All three symbols have calmed: current vol_x_ref is 0.75/0.72/0.84 for BTC/ETH/SOL. BTC's 2.4x peak and SOL's 1.8x peak in the window were brief and have faded. Prices drifted up steadily (+21/+13/+11 bps) with ordinary P_z (<1.4), so this is orderly post-CPI drift rather than disorderly flow. With CPI 43 minutes behind us and nothing scheduled, the case for next-5-minute vol ≥1.5x is gone.
+RISK: I would widen if vol_x_ref goes back above ~1.5 and stays there, or if a symbol makes a large move_z (>3) with |P_z| above 2. A BTC break above its recent range on one-sided flow would count, since the last chunk's move_z was already 1.92.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do post-CPI secondary vol bursts (30-60 minutes after the release) in BTC/SOL tend to cluster around US equity-session flows, and is there an hour-of-day pattern?
+
+[237.83s] round 26 @ sim 13:15 UTC (+0 findings, 0 alerts, data age ≤2.70s)
+VIEW: BTC vol has jumped back to 2.5x reference (peak 2.6x) after being 0.75x last round. Its price is roughly flat (+1 bps) and P_z is ordinary, so the jump is choppy rather than directional, but elevated vol now points to next-5-minute vol above 1.5x. ETH (1.05x) and SOL (0.88x) stay calm. SOL's +27.6 bps drift came with ordinary pressure (P_z ≤1.0), so it looks orderly.
+
+RISK: If BTC vol_x_ref falls back below about 1.5x, I return BTC to normal. If BTC breaks directionally with |P_z| above 2, or the vol spills into ETH or SOL (vol_x_ref above 1.5x), I escalate. A SOL move_z above 2 alongside rising vol would also push it to widen.
+
+STANCE: btc=widen eth=normal sol=normal
+
+RESEARCH: What drove BTC's isolated vol spike around 13:14–13:16 UTC (a large liquidation, a spot-venue print, or BTC-specific news), and does it usually stay in BTC or spread to ETH/SOL?
+
+[246.41s] round 27 @ sim 13:19 UTC (+0 findings, 0 alerts, data age ≤0.15s)
+VIEW: BTC vol has dropped back to 0.97x reference, down from its 2.5x peak earlier in the window, so the reason for widening last round is gone. All three symbols drifted lower together (BTC -22, ETH -19, SOL -48.5 bps), but order-flow pressure stayed ordinary (|P_z| ≤ 1.6) and current vol is at or below reference (ETH 0.56x, SOL 0.77x). The CPI release at 12:30 is 50 minutes past, and nothing else is scheduled.
+RISK: I would move BTC to widen if its vol_x_ref climbs back above 1.5x or another 2.5x burst appears. I would widen SOL if its selloff speeds up with |P_z| above 2 or vol above 1.5x. Flatten would need disorderly pressure (|P_z| above 3) together with a sharp move.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the cross-asset drift lower (SOL roughly 2x BTC) coming from one driver, such as perp funding, liquidations or an equity-index move after CPI, that could turn into a faster leg down?
+
+[255.04s] round 28 @ sim 13:21 UTC (+0 findings, 0 alerts, data age ≤2.73s)
+VIEW: BTC turned up +11.9 bps, and its current vol is 1.67x reference (peak 2.06x) with move_z 2.17, so it is elevated again after last round's 0.97x. SOL ran +16.5 bps over a 28 bps range and briefly reached 2.2x, but it has settled back to 1.03x. ETH stayed quiet at 0.77x. Order-flow pressure is ordinary on all three (P_z ≤ 1.3), and with CPI 51 minutes past there is no scheduled catalyst.
+RISK: I return BTC to normal if its vol falls back below about 1.3x without further directional chunks. I widen SOL or ETH if their vol goes back above 1.5x, or if any |P_z| moves above 2 alongside a continued joint rally.
+STANCE: btc=widen eth=normal sol=normal
+RESEARCH: Does a renewed BTC vol pickup about 50 minutes after CPI tend to persist, or is it a short-lived liquidity air pocket?
+
+[261.74s] round 29 @ sim 13:24 UTC (+0 findings, 0 alerts, data age ≤2.35s)
+VIEW: BTC vol fell back to 0.36x ref. It briefly peaked at 1.7x mid-window, and P_z touched -2.5 and then reversed to +1.6, so the elevation from last round has faded. ETH (0.48x) and SOL (0.67x) are quiet despite SOL's -10.8 bps drift. With CPI 55 minutes past and no catalyst scheduled, nothing points to 1.5x+ vol in the next 5 minutes.
+RISK: I would widen BTC again if its vol_x_ref goes back above ~1.5x or P_z pushes past ±2.5 with a building dP. I would widen SOL if its drift turns disorderly, with range expanding and vol above 1.5x.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do post-CPI BTC vol re-spikes 45–60 minutes after release persist beyond 5 minutes, or mean-revert quickly?
+
+[269.21s] round 30 @ sim 13:27 UTC (+0 findings, 0 alerts, data age ≤0.04s)
+VIEW: All three moved up together, +13 to +18 bps over two minutes. The moves were orderly: BTC vol peaked at 1.9x and SOL at 2.1x, but both have settled back to 1.19x and 0.8x, and ETH stayed at or below 1.0x the whole time. Pressure is ordinary, with |P_z| no higher than 2.0 anywhere. CPI was nearly an hour ago and nothing else is scheduled, so I don't expect 1.5x+ vol in the next 5 minutes.
+
+RISK: I would widen the affected symbol if BTC vol_x_ref holds above 1.5x or the BTC peaks keep building. The same applies if SOL spikes past 2x again with |P_z| above 2.5, or if a sharp move spreads across symbols with pressure accelerating in one direction.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Is this synchronized +15 bps drift across BTC/ETH/SOL about 55 minutes after CPI tied to the US equity cash open or to delayed macro repositioning, and does that pattern usually bring follow-on vol?
+
+[278.84s] round 31 @ sim 13:29 UTC (+0 findings, 1 alerts, data age ≤1.52s)
+VIEW: SOL broke away from the group, up 39 bps in a minute with a 2.94-sigma last chunk. Its vol is still elevated at 1.68x, so the move looks like it is in progress rather than finished. BTC briefly spiked to 3.7x vol but is already back to 0.85x; P_z of -2.1 is borderline, not a signal on its own. ETH is at 1.34x, below threshold, and CPI is an hour past.
+RISK: I would widen BTC or ETH if SOL's move spills over (vol_x_ref holding above 1.5x or another BTC spike above 3x). I would return SOL to normal if its vol drops below about 1.3x and move_z settles inside ±1.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: Is there a SOL-specific catalyst (news, liquidation cluster, large spot flow) behind the +39 bps move that BTC and ETH did not share?
+
+=== rounds ===
+ round   at_s  llm_s sim_utc  data_age_s  new_findings  alerts     btc    eth     sol
+     0   8.11   5.60   12:00        0.99             0       0  normal normal  normal
+     1  15.23   6.12   12:02        1.60             0       0  normal normal  normal
+     2  23.41   7.18   12:04        2.72             4       1  normal normal   widen
+     3  34.68  10.27   12:07        1.89             2       1   widen  widen   widen
+     4  44.90   9.22   12:11        1.15             1       0  normal normal   widen
+     5  51.85   5.95   12:14        2.36             0       0  normal normal  normal
+     6  63.18  10.33   12:17        0.31             1       1   widen normal  normal
+     7  71.39   7.22   12:20        2.63             0       0  normal normal  normal
+     8  81.26   8.87   12:23        1.84             0       0  normal normal  normal
+     9  92.02   9.76   12:26        2.70             0       4   widen  widen flatten
+    10  98.99   5.97   12:30        1.46             0       3 flatten  widen flatten
+    11 106.75   6.76   12:32        2.42             0       6 flatten  widen flatten
+    12 113.79   6.04   12:35        1.17             0       8   widen normal   widen
+    13 120.49   5.70   12:37        2.20             0       3   widen normal   widen
+    14 131.52  10.02   12:39        2.90             0       2   widen normal   widen
+    15 138.90   6.38   12:43        1.92             0       0   widen normal   widen
+    16 147.63   7.73   12:46        0.30             0       0  normal normal   widen
+    17 155.44   6.81   12:49        0.02             0       0  normal normal   widen
+    18 163.83   7.38   12:51        1.83             0       0   widen normal   widen
+    19 173.57   8.74   12:54        1.21             0       0  normal normal   widen
+    20 180.76   6.19   12:57        1.94             0       0   widen normal   widen
+    21 190.36   8.60   13:00        0.12             0       0   widen normal   widen
+    22 198.61   7.25   13:03        0.72             0       0  normal normal  normal
+    23 209.25   9.64   13:05        2.96             0       0  normal normal  normal
+    24 218.87   8.62   13:09        1.59             0       3   widen normal   widen
+    25 228.37   8.50   13:12        2.21             0       0  normal normal  normal
+    26 237.83   8.46   13:15        2.70             0       0   widen normal  normal
+    27 246.41   7.58   13:19        0.15             0       0  normal normal  normal
+    28 255.04   7.62   13:21        2.73             0       0   widen normal  normal
+    29 261.74   5.69   13:24        2.35             0       0  normal normal  normal
+    30 269.21   6.48   13:27        0.04             0       0  normal normal  normal
+    31 278.84   8.63   13:29        1.52             0       1  normal normal   widen
+
+=== did the stance anticipate risk? (next 5 sim-min after it arrived; risky = fwd vol >= 1.5x ref) ===
+        fwd_vol_x_ref       fwd_max_move_bps      
+                 mean count             mean count
+stance                                            
+flatten          2.84     5            60.46     5
+normal           1.26    59            32.76    59
+widen            1.62    32            36.83    32
+risky windows: 29 of 96
+  analyst  caught 18, missed 11, cautious-but-quiet 19  (recall 62%, precision 49%)
+  rule     caught 20, missed 9, cautious-but-quiet 13  (recall 69%, precision 61%)
+decision lag (sim seconds from data to stance): median 150s, max 240s
+saved runs/2024-03-12_110842_{scores,rounds}.csv
+
+first analyst view at 8.1s; research calls 8 (83s agent time); wall 279s

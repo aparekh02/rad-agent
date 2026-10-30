@@ -1,0 +1,292 @@
+2024-03-11: replaying 54,001 ticks x 3 symbols at 20x ≈ 270s wall; event: none
+
+[  8.14s] round 0 (+0 findings, 3 new entries, data age ≤0.99s)
+VIEW: All three fell about 8-10 bps together this minute with vol peaks of 1.8-2.1x, but instantaneous vol has eased (SOL 1.15x) and pressure is noise. SOL's 1m vol is still 1.54x and the correlated move only just happened, so it is too early to call the burst over.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: Was there an unscheduled cross-asset catalyst (macro headline, large liquidation, or exchange flow) around 12:00 UTC behind the synchronized ~10 bps drop?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'widen'}
+
+[ 14.54s] round 1 (+1 findings, 6 new entries, data age ≤1.93s)
+VIEW: BTC and ETH have rallied about 24-39 bps this minute, with vol peaks near 2.1x and 1-minute vol still 1.56-1.67x, so the burst is not over. Pressure is noise and nowhere near 3x vol, so flattening isn't warranted. SOL's vol has eased to 0.86x despite its +47 bps move, and its floor is normal.
+STANCE: btc=widen eth=widen sol=normal
+RESEARCH: After a correlated cross-asset move of 40+ bps with neutral order-flow pressure, how often does a second leg follow in the next 5 minutes in BTC/ETH/SOL perps?
+→ {'btc': 'widen', 'eth': 'widen', 'sol': 'normal'}
+
+[ 21.01s] round 2 (+3 findings, 7 new entries, data age ≤2.34s)
+VIEW: SOL's burst peaked at 4.2x this minute, and 1-minute vol is still 2.0x with a fresh alert, so it is too early to stand down. Pressure is noise (P_z 0.2) and move_z is only 1.3, so flattening isn't warranted. BTC and ETH have calmed to about 0.8-1.1x with noise pressure.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: After a single-minute vol spike of 4x or more in SOL perps with neutral order-flow pressure, how often does vol re-spike within the next 5 minutes, compared with decaying back to the reference level?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'widen'}
+
+[ 28.63s] round 3 (+1 findings, 6 new entries, data age ≤2.79s)
+VIEW: All three are calm: BTC and ETH are at 0.65-0.9x 1-minute vol with noise pressure, and SOL's burst has faded to 1.2x (below the 1.5x widen trigger) with P_z 0.5 and no alerts. The floor is normal for everything, and nothing argues for escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was there a large liquidation cluster or exchange-flow spike in BTC/ETH/SOL perps on 2026-10-29 between 11:55 and 12:05 UTC (e.g., on Coinglass) that explains the synchronized ~10 bps drop and SOL's later 4x vol burst?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 35.79s] round 4 (+2 findings, 9 new entries, data age ≤1.41s)
+VIEW: Every symbol is calm: BTC and ETH are at about 0.6x 1-minute vol with noise-level pressure. SOL peaked at 2.3x inside the window but is now 1.01x 1-minute with P_z -0.5 and no alerts. The floor is normal everywhere, there are no scheduled events, and nothing argues for escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's repeated short 2x vol bursts with neutral pressure, while BTC and ETH stay calm, predict a larger SOL-specific move within 15 minutes, for example from liquidation clusters or open-interest buildup?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 42.09s] round 5 (+0 findings, 6 new entries, data age ≤2.57s)
+VIEW: All three are calm. 1-minute vol sits at 0.7–0.93x reference and |P_z| ≤ 1.3 with no alerts. SOL's 35 bps range and 1.7x peak faded back to 0.93x, and BTC's mild positive pressure is still noise-level. There are no events, so nothing justifies escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's repeated intra-window vol spikes (2.3x, then 1.7x) without sustained pressure tend to come before a larger breakout within the next 5–10 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 48.36s] round 6 (+0 findings, 6 new entries, data age ≤2.86s)
+VIEW: All three remain calm. 1-minute vol is 0.55–0.78x reference, current |P_z| ≤ 0.25 and there are no alerts. ETH's brief P_z spike to 2.8 faded, and BTC/SOL's ~-10 bps last chunk is within normal noise (|move_z| ≤ 1.2). With no events scheduled, the floor holds.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do brief ETH order-flow pressure spikes (P_z ~3) without a vol pickup predict a directional move or vol burst over the next 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 53.90s] round 7 (+1 findings, 9 new entries, data age ≤0.14s)
+VIEW: All three are calm: 1-minute vol is 0.61–0.77x reference, there are no alerts, and |move_z| ≤ 1.1. The grind lower (SOL -28 bps, ETH -15 bps over 2 min) is orderly. BTC's P_z of -1.96 is at the edge of noise but not building (d2P ≈ 0), so the floor holds.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there persistent BTC sell-side flow (e.g., large spot exchange inflows or perp funding turning negative) around 12:15 UTC on 2026-10-29 that could extend the steady decline across BTC/ETH/SOL?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 60.78s] round 8 (+0 findings, 3 new entries, data age ≤2.68s)
+VIEW: All three remain calm: 1-minute vol is 0.70–0.76x reference, there are no alerts, and |move_z| ≤ 1. The drift lower continues (BTC -9.6, ETH -7.2, SOL -7.0 bps this chunk) but it is orderly. BTC's P_z eased from -1.96 to -0.99, so pressure is fading rather than building.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the steady cross-asset drift lower since ~12:15 tied to a specific flow or news item, such as a large liquidation, an ETF flow or a macro headline, that could turn into a sharper move?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 66.53s] round 9 (+0 findings, 9 new entries, data age ≤0.54s)
+VIEW: All three are calm. 1-minute vol is 0.55–0.65x reference, there are no alerts, |move_z| ≤ 0.41 and |P_z| < 1. The rebound over the last two minutes (SOL +40 bps, with brief vol peaks of 1.5–1.6x) has settled without pressure building.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Did anything trigger the synchronized ~12:19–12:20 rebound, led by SOL, that could recur, such as a large spot flow or a funding/liquidation cluster?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 71.96s] round 10 (+0 findings, 6 new entries, data age ≤0.29s)
+VIEW: All three remain calm. 1-minute vol is 0.48–0.87x reference, there are no alerts, |move_z| ≤ 0.48 and |P_z| ≤ 1.0, and no events are scheduled. SOL's +12 bps drift came with a brief 1.2x vol peak and its pressure has faded to about zero, so nothing argues for deviating from the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does SOL's repeated upside drift over the past few minutes (+40 bps, then +12 bps) line up with any off-schedule news or large spot flows that could restart a burst?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 76.36s] round 11 (+0 findings, 3 new entries, data age ≤2.71s)
+VIEW: All three remain calm. 1-minute vol is 0.49–0.79x reference, there are no alerts, |move_z| ≤ 1.15 and |P_z| ≤ 0.7, and no events are scheduled. The modest +9 to +12 bps upward drift is orderly, so I'm keeping the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 82.13s] round 12 (+0 findings, 6 new entries, data age ≤1.12s)
+VIEW: All three are calm, with 1-minute vol at 0.40–0.83x reference, |move_z| ≤ 1.65, no alerts and no events. ETH P_z of +2.9 shows mild buy pressure building alongside a steady ~+11 bps BTC/ETH upward drift, but nothing points to disorder, so I'm keeping the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the persistent ETH buy-side pressure (P_z rising to +2.9 with positive dP/d2P) linked to a specific flow source or news that could escalate into a larger one-way move?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 87.25s] round 13 (+0 findings, 6 new entries, data age ≤0.88s)
+VIEW: All three are calm, with 1-minute vol at 0.40–0.64x reference, |move_z| ≤ 0.4, |P_z| ≤ 1.0, no alerts and no scheduled events. ETH's brief 1.5x vol peak has already faded and its earlier +2.9 pressure has eased to +0.9, so I'm keeping the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does SOL's steady drift lower (-6.7 bps on an 18 bps range) while BTC/ETH hold flat point to SOL-specific flow worth watching?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 92.74s] round 14 (+0 findings, 6 new entries, data age ≤0.00s)
+VIEW: All three remain calm, with 1-minute vol at 0.77–0.85x reference, |move_z| ≤ 1.0, |P_z| ≤ 1.1, no alerts and no scheduled events. BTC's +22 bps drift with a 1.4x vol peak stayed below the widen threshold and has already cooled to 0.5x, so I'm keeping the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[ 98.17s] round 15 (+0 findings, 3 new entries, data age ≤2.48s)
+VIEW: All three are quiet, with 1-minute vol at 0.68–0.87x reference, |move_z| ≤ 0.23, |P_z| ≤ 0.9, no alerts and no scheduled events. Brief vol peaks of 1.1–1.3x stayed below the widen threshold, so I'm keeping the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[103.30s] round 16 (+0 findings, 6 new entries, data age ≤1.91s)
+VIEW: BTC and ETH are quiet (1m vol about 0.4x reference, |P_z| ≤ 1.4). SOL drifted down 26 bps with a vol peak of 1.9x, but it is now at 1.15x with P_z near 0, below the widen threshold. There are no alerts or events, so nothing justifies deviating from the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there SOL-specific news or a liquidation cluster behind the -26 bps move while BTC rose +11 bps?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[108.47s] round 17 (+0 findings, 6 new entries, data age ≤1.04s)
+VIEW: All three are calm, with 1m vol at 0.73–0.88x reference and peaks at or below 1.4x. There are no alerts or events. SOL P_z sits at the noise edge (+2.0) and BTC's -14 bps chunk is only move_z -1.4, so neither supports escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does SOL order-flow pressure holding near P_z +2 tend to come before vol bursts within 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[114.26s] round 18 (+0 findings, 7 new entries, data age ≤0.20s)
+VIEW: ETH briefly spiked to 3.7x ref vol, but it has faded to 1.02x now (1m 1.29x, below the widen threshold), with P_z flat at 0.2 and move_z 1.9. BTC and SOL are calm with pressure in the noise band and no events scheduled, so nothing supports escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do isolated ETH vol spikes of 3x or more with flat order-flow pressure tend to recur within 5 minutes, or are they usually one-off liquidity sweeps?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[119.46s] round 19 (+0 findings, 3 new entries, data age ≤3.00s)
+VIEW: All three are calm: 1m vol is below the widen threshold everywhere (ETH 1.2x is highest, with its earlier spike fully faded), all |P_z| are below 1.1, there are no alerts and no scheduled events. Nothing supports escalating, so I'm repeating the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do brief isolated ETH vol spikes (3x+ ref that fade within a minute) tend to recur within the next 5-10 minutes, or are they usually one-off liquidity events?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[127.78s] round 20 (+0 findings, 6 new entries, data age ≤2.19s)
+VIEW: The floor is normal everywhere. ETH is the warmest: 1m vol is 1.38x, just under the 1.5x widen line, and it peaked at 2.0x in the window, with steady positive P_z of 1.74, still noise. BTC and SOL are quiet, with no alerts and no events, so nothing supports flattening.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does a persistent positive ETH P_z around 1.5-2 with 1m vol near 1.4x tend to come before a 1.5x+ vol burst within the next 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[132.54s] round 21 (+0 findings, 9 new entries, data age ≤1.51s)
+VIEW: Everything is calm. 1m vol is 0.62–1.09x reference and all |P_z| < 1.1, with no alerts and no scheduled events. ETH has cooled from the earlier 2.0x peak, and the small down-drift across all three symbols is orderly.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[136.98s] round 22 (+0 findings, 6 new entries, data age ≤0.26s)
+VIEW: Calm across all three: 1m vol is 0.45–0.69x reference, all |P_z| < 0.4, and there are no alerts or scheduled events. ETH's brief 1.5x vol peak and its -7.7 bps drift were orderly and have faded.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[143.04s] round 23 (+0 findings, 3 new entries, data age ≤1.70s)
+VIEW: Still calm: 1m vol is 0.53–0.96x reference, all |P_z| < 0.4, and there are no alerts or scheduled events. ETH and SOL each rose about 15 bps on an orderly path, and SOL's brief 1.9x vol peak did not push its 1m vol above reference.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the matching ~+15 bps ETH/SOL move with flat BTC a sign of alt-specific flow (e.g., ETF or news) that could keep going?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[149.54s] round 24 (+0 findings, 6 new entries, data age ≤1.76s)
+VIEW: Calm with a mild drift lower: 1m vol is 0.68–1.11x reference, all |P_z| < 1, and there are no alerts or scheduled events. ETH briefly hit 1.9x vol but its 1m vol stayed near reference, and BTC's P_z dip to -1.8 faded back to noise.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the synchronized -7 to -11 bps drift across BTC, ETH and SOL tied to a cross-market flow, such as equities or USD moves, that could build further?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[155.49s] round 25 (+0 findings, 6 new entries, data age ≤2.26s)
+VIEW: ETH is still elevated: 1m vol is 1.81x reference with a -23 bps chunk (move_z -3.0). That is not over, but it falls short of flatten, since vol is under 3x and P_z of +0.3 shows no building one-way pressure. BTC and SOL are calm (SOL's 2.1x spike has faded to 0.7x), and there are no scheduled events.
+STANCE: btc=normal eth=widen sol=normal
+RESEARCH: Is there an ETH-specific catalyst (unlock, large liquidation cluster, or exchange flow) behind the -31 bps move that is outpacing BTC?
+→ {'btc': 'normal', 'eth': 'widen', 'sol': 'normal'}
+
+[160.74s] round 26 (+0 findings, 6 new entries, data age ≤2.20s)
+VIEW: Everything is calm: 1m vol sits at 0.6-0.96x reference on all three, P_z is noise (<1), and there are no alerts or scheduled events. ETH's 2.1x spike within the last minute has faded, and the floor is normal everywhere, so I'm repeating it.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do ETH's recurring short vol bursts (2.1x this minute, a -3.0 move_z chunk last round) lead BTC/SOL or come from ETH-specific flow such as large liquidations or a single venue?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[166.51s] round 27 (+0 findings, 6 new entries, data age ≤1.45s)
+VIEW: All three are calm. 1m vol is 0.84-1.21x reference and P_z is noise, with no alerts or events, so there is no case to escalate. SOL's 2.1x intra-minute peak and the +11-16 bps upward drift across all names bear watching but don't meet flatten criteria.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the synchronized +11-16 bps rally across BTC/ETH/SOL in the last minute driven by a common news or flow catalyst that could resume?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[171.80s] round 28 (+0 findings, 6 new entries, data age ≤1.21s)
+VIEW: All three are calm: 1m vol is 0.61-0.92x reference, there are no alerts and no events, and the floor is normal everywhere. ETH's P_z of -1.97 is at the edge of noise and drifting down, alongside a mild -9 to -12 bps BTC/ETH decline, but it is far from flatten criteria.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does persistent ETH sell pressure near P_z -2 during a quiet tape tend to come before a vol burst within 5 minutes, or does it usually fade?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[177.64s] round 29 (+0 findings, 6 new entries, data age ≤0.50s)
+VIEW: All three remain calm. 1m vol is 0.65-1.13x reference, there are no alerts or events, and all |P_z| are below 2. The steady drift lower (-10 to -22 bps, led by SOL with P_z of -1.71 and falling) is worth watching, but it is nowhere near flatten criteria.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the coordinated -10 to -22 bps drift across BTC/ETH/SOL tied to a known cross-market flow, such as equity futures or a large liquidation, that could speed up?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[182.48s] round 30 (+0 findings, 6 new entries, data age ≤0.34s)
+VIEW: All three are quiet. 1m vol is 0.40-0.59x reference, all |P_z| are below 0.5, and there are no alerts or scheduled events. The earlier downward drift has reversed to modest gains in BTC and ETH, and SOL's selling pressure has faded.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[187.81s] round 31 (+0 findings, 3 new entries, data age ≤2.18s)
+VIEW: All three are still calm: 1m vol is 0.56-0.76x reference, there are no alerts, and no events are scheduled. The last chunk drifted down 4-11 bps with mild negative pressure (SOL P_z -1.76, still below the noise threshold), which does not suggest a disorderly next 5 minutes.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does a coordinated multi-asset down-drift with SOL P_z near -2 tend to precede a vol burst within 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[192.86s] round 32 (+0 findings, 6 new entries, data age ≤1.51s)
+VIEW: All three remain calm, with 1m vol at 0.56-0.79x reference, no alerts, no scheduled events and all P_z inside noise. SOL briefly peaked at 2.6x within the minute (range 33 bps), but the burst has already faded to 0.5x now, so it isn't building toward a disorderly move.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's brief intra-minute vol spikes (2-3x reference) that fade within the minute tend to cluster or come before larger SOL moves in the following 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[197.35s] round 33 (+0 findings, 6 new entries, data age ≤0.55s)
+VIEW: All three are quiet, with 1m vol at 0.55-0.68x reference, all P_z inside noise, no alerts and no scheduled events. BTC and SOL show mild negative pressure drift, but nothing is close to a disorderly move.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[202.24s] round 34 (+0 findings, 3 new entries, data age ≤2.04s)
+VIEW: All three remain quiet, with 1m vol at 0.63-0.69x reference, peaks near 1x, P_z inside noise, no alerts and no scheduled events. The modest -6 to -9 bp drift is orderly and gives no reason to override the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[207.13s] round 35 (+0 findings, 6 new entries, data age ≤0.92s)
+VIEW: All three stay calm. 1m vol is 0.43-0.81x ref, P_z is inside noise, and there are no alerts or events. SOL's brief 1.5x tick peak and +17 bp drift are orderly and do not justify overriding the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's short 1.3-1.5x vol spikes with mild positive pressure tend to lead to sustained bursts within 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[211.42s] round 36 (+0 findings, 3 new entries, data age ≤2.81s)
+VIEW: Markets are quiet across the board. 1m vol is 0.56-0.68x ref, P_z sits inside noise, and there are no alerts or scheduled events. SOL's 1.3x tick peak is isolated and orderly.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[217.61s] round 37 (+0 findings, 7 new entries, data age ≤1.10s)
+VIEW: SOL dropped 44 bps with a 4.5x vol burst, but it has faded: 1m vol is 1.2x ref and P_z of 0.3 shows no one-way pressure building, so flattening isn't justified. BTC and ETH are quiet, with vol at or below ref and pressure inside noise.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was SOL's -28 bps move at 13:09:59 caused by a large liquidation or a single-venue sweep, and do such moves usually get a second leg within 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[225.27s] round 38 (+0 findings, 6 new entries, data age ≤1.29s)
+VIEW: All three are calm. BTC and SOL vol is below ref and pressure is inside noise. ETH's 1m vol of 1.3x is elevated but still under the 1.5x widen threshold, with P_z 0.6 and move_z -0.6, so nothing argues for escalating.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was the earlier 44 bps SOL drop tied to a specific catalyst, such as a liquidation cascade or news, that could recur?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[231.39s] round 39 (+0 findings, 6 new entries, data age ≤2.94s)
+VIEW: All three are quiet, with 1m vol at 0.47–0.56x ref and every |P_z| under 1. SOL's +19.5 bps drift with a 1.5x peak came with only mild pressure and has already faded, and no events are scheduled, so the floor stays normal.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Did SOL's +19.5 bps drift over the last minute come from a venue-specific flow or listing, or was it broad-market beta?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[237.47s] round 40 (+0 findings, 10 new entries, data age ≤0.07s)
+VIEW: SOL dropped 28 bps with a 3.6x vol spike, but 1m vol is back to 1.4x and P_z is only -0.24, so pressure isn't building. BTC and ETH are calm, and with no scheduled events there's no reason to flatten, so the floor stays normal.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was SOL's -28 bps move at 13:16–13:18 UTC driven by a specific SOL headline or a large liquidation, and is there follow-through risk?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[242.87s] round 41 (+0 findings, 6 new entries, data age ≤0.14s)
+VIEW: All three are quiet: 1m vol sits below reference (BTC 0.35x, ETH 0.43x, SOL 0.67x) and |P_z| is under 1 everywhere. SOL's earlier burst has faded with no follow-through, and there are no scheduled events, so the floor's normal stance stands.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Did SOL's 28 bps drop and 3.6x vol spike at about 13:18 have a specific cause, such as a liquidation cascade or a large venue-specific seller, that could come back?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[248.73s] round 42 (+0 findings, 3 new entries, data age ≤2.54s)
+VIEW: All three stay quiet with 1m vol below reference (BTC 0.56x, ETH 0.72x, SOL 0.57x) and |P_z| under 1.3 everywhere. ETH and SOL drifted about -9 bps on mild sell pressure, but nothing points to a disorderly move and no events are scheduled.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does a correlated ETH/SOL drift of about -9 bps with negative P_z while BTC is flat tend to come before a broader alt-led selloff within 5 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[254.13s] round 43 (+0 findings, 6 new entries, data age ≤2.40s)
+VIEW: All three rallied about +18-22 bps in the last minute with brief vol peaks (BTC 1.7x, SOL 1.8x), but 1m vol is back near reference (BTC 1.05x, ETH 0.92x, SOL 0.57x). Pressure is noise apart from a mild ETH buy tilt (P_z 1.4), and no events are scheduled.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there a common driver (index flows, ETF or macro headline) behind the synchronized ~20 bps rally across BTC, ETH and SOL at 13:22 UTC?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+[259.47s] round 44 (+0 findings, 6 new entries, data age ≤1.79s)
+VIEW: BTC and ETH extended their rally (+18 and +13 bps) and BTC briefly hit 2.1x vol, but 1m vol is now near reference (BTC 1.24x, ETH 0.81x, SOL 0.83x). Pressure is noise everywhere and no events are scheduled, so there is no reason to override the floor.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do repeated short BTC vol bursts (2x peaks during a steady rally) tend to come before a sustained vol regime shift within the next 5-10 minutes?
+→ {'btc': 'normal', 'eth': 'normal', 'sol': 'normal'}
+
+=== data layer ===
+time to first agent decision   8.1s
+agent rounds                   45 (median 4.5s each)
+data age at agent read         median 1.51s, max 3.00s
+fast-path evaluations          275 (p50 5 us, p99 34 us; decision changed 21x)
+source snapshots               261 (collector:btc 87, collector:eth 87, collector:sol 87)
+ticks processed                156,600 (604/s wall)
+processing cost                median 3.43 us/tick
+research findings              8 (median 9s each, run concurrently)
+wall time                      259s
+
+=== demo consumer: quoting stance vs what the market did next ===
+
+windows: 135; risky (next-5-min vol >= 1.5x ref): 1; severe (>= 3.0x): 0
+policy    recall precision  quiet-but-cautious flatten n flatten->severe normal fwd vol cautious fwd vol
+rule          0%        0%                   5         0            nan%           0.82             1.05
+agent         0%        0%                   5         0            nan%           0.82             1.05
+final         0%        0%                   5         0            nan%           0.82             1.05
+
+saved runs/2024-03-11_113019_*

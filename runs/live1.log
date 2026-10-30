@@ -1,0 +1,306 @@
+replaying 54,001 ticks (90 sim-min) at 20x ≈ 270s wall
+
+[  7.81s] round 0 @ sim 12:00 UTC (+0 findings, 0 alerts, data age ≤1.00s)
+VIEW: Conditions are calm at 12:01 UTC: vol_ratios are near 1, spreads are tight and pressure is neutral to mildly negative. SOL has the widest range (20 bps) and the strongest sell lean (P_z -0.85), but nothing is extreme. US CPI lands in about 29 minutes, so this is a quiet window before a known jump risk.
+RISK: Widen any symbol if vol_ratio holds above 2 or |P_z| goes above 2. Move all three to widen by about 12:25 UTC ahead of CPI, and flatten into the 12:30 print if inventory is sizable.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: What is the typical 1-5 minute post-CPI move and spread blowout for BTC, ETH and SOL perps on recent surprise prints, and how long does liquidity take to recover?
+
+[ 17.64s] round 1 @ sim 12:02 UTC (+1 findings, 0 alerts, data age ≤1.37s)
+VIEW: Buy pressure has built across the complex. BTC rose 11.9 bps and its P_z reached +3.02, past my |P_z|>2 trigger, while vol_ratio stays low (0.64). Persistent one-sided flow with low vol is the classic setup for being picked off on the ask. ETH (+13.9 bps, P_z +1.92) is just under the threshold and SOL (P_z +1.21, still accelerating) is following. CPI is now about 27 minutes out.
+
+RISK: Widen ETH if its P_z goes above 2 or BTC's buy flow spills into ETH and SOL (SOL P_z above 2 with d2P still positive). Flatten BTC if vol_ratio goes above 2 while P_z stays above 3. Return BTC to normal if P_z falls back below 1.5. Hard rule: all three go to widen by 12:25 and flatten into the 12:30 CPI print.
+
+STANCE: btc=widen eth=normal sol=normal
+
+RESEARCH: Does a BTC P_z above 3 with low vol_ratio in the 30 minutes before a scheduled macro print tend to continue or mean-revert over the next 1-5 minutes, and does it predict the direction of the post-release move?
+
+[ 26.39s] round 2 @ sim 12:05 UTC (+3 findings, 1 alerts, data age ≤2.20s)
+VIEW: BTC's buy flow has fully unwound: P_z fell from +3.02 to +0.11 and price is roughly flat, so my condition to return BTC to normal is met. SOL spiked +20.7 bps in 60s (vol_ratio peaked at 3.5x) and has since reversed. It now shows building sell pressure (P_z -1.81, dP and d2P both negative), so the whipsaw risk is real even though current vol_ratio is low at 0.58. ETH has turned from buying to selling (-11.5 bps, P_z -1.31) but is still under threshold. CPI is about 24 minutes out.
+
+RISK: Widen ETH if its P_z goes below -2 or its vol_ratio rises above 1.5. Flatten SOL if its P_z goes below -2.5 with d2P still negative, or if it has another alert with vol_ratio above 3. Widen BTC again if its |P_z| goes above 2. Hard rule unchanged: all three go to widen by 12:25 and flatten into the 12:30 CPI print.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: In the 30 minutes before a scheduled macro print, are sharp SOL moves (above 20 bps in 60s, vol_ratio above 3) followed by mean-reversion or continuation, and do they lead the BTC and ETH moves at the release?
+
+[ 39.74s] round 3 @ sim 12:08 UTC (+2 findings, 4 alerts, data age ≤1.94s)
+VIEW: A synchronized selloff hit all three: BTC -18 bps with vol_ratio peaking at 3.6x and P_z down to -3.1, ETH -26 bps peaking at 2.9x, and SOL -44 bps over an 87 bps range with P_z down to -2.9. That breaches my BTC |P_z|>2, ETH vol_ratio>1.5 and SOL P_z<-2.5 triggers. All three are now bouncing (SOL +31 bps this chunk) with P_z near zero, but d2P is still negative and vol_ratio is still 1.4–1.6x. That looks like a two-way whipsaw rather than a calm market, with CPI about 21 minutes out.
+
+RISK: Return BTC and ETH to normal only if vol_ratio stays below 1.2 and |P_z| below 1 for 3 or more minutes before 12:20. Move BTC or ETH to flatten if any symbol gets a new alert with move_z beyond ±4 or vol_ratio above 3. Hard rule unchanged: all three go to widen by 12:25 at the latest and flatten into the 12:30 print.
+
+STANCE: btc=widen eth=widen sol=flatten
+
+RESEARCH: When BTC, ETH and SOL sell off together (move_z below -4 in all three) 20–25 minutes before CPI, does that pre-release move tend to revert before the print, and does it change the size or direction of the first 5-minute post-release move?
+
+[ 53.07s] round 4 @ sim 12:13 UTC (+1 findings, 1 alerts, data age ≤0.28s)
+VIEW: The fresh snapshot is calm: vol_ratio is 0.69–1.08 and |P_z| is below 1 everywhere. But the path since 12:10 was not. ETH hit a 3.5x vol_ratio spike at 12:10:59 with zero net move, SOL bled another -27 bps over a 44 bps range, and BTC peaked at 2.9x. That ETH spike breaches my vol_ratio>3 flatten trigger. With CPI 16 minutes out, a high-vol whipsaw that goes nowhere suggests liquidity is thin, not that the market has calmed.
+
+RISK: Flatten BTC if it gets an alert with vol_ratio above 3 or |move_z| above 4, or if SOL's selling spreads to BTC (BTC P_z below -2). Return ETH to widen only if vol_ratio stays below 1.2 through 12:20. The hard rule is unchanged: everything at least widen by 12:25 and flatten into the 12:30 print.
+
+STANCE: btc=widen eth=flatten sol=flatten
+
+RESEARCH: In the 15 minutes before a CPI print, do perp vol_ratio spikes above 3x with near-zero net move (thin-book whipsaws) predict a larger absolute move or a wider spread in the first 60 seconds after the release?
+
+[ 62.73s] round 5 @ sim 12:17 UTC (+1 findings, 2 alerts, data age ≤1.61s)
+VIEW: BTC hit both flatten triggers at 12:15:59: it fell -17.3 bps in 60s (move_z -4.5) and vol_ratio peaked at 4.0x. Over the window BTC lost 11.8 bps, ETH 17.1 and SOL 31.4, so all three are lower together with CPI 12 minutes out. The fresh snapshot shows a mild bounce (P_z about +1.4 everywhere) but d2P is negative, so the buying is fading. With books this thin before the print, the bounce does not justify adding risk. The research gives no usable edge: it ran no backtest, and only BTC, not all three, actually hit z<-4.
+
+RISK: I will not move any symbol below flatten through the 12:30 print. After the print, I would step BTC and ETH back to widen only once vol_ratio stays below 1.5 for 60s and spreads return to pre-event levels (BTC about 0.014 bps). A new alert with |move_z| above 4 resets that clock.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: After a CPI print, how many seconds does it typically take for perp vol_ratio and spread_bps to return to their pre-release baseline? This would set an evidence-based re-entry delay for moving from flatten back to widen.
+
+[ 71.98s] round 6 @ sim 12:20 UTC (+0 findings, 0 alerts, data age ≤2.26s)
+VIEW: Since 12:18:59 conditions have calmed: vol_ratio is back to about 0.7x on all three, and BTC's spread has returned to 0.014 bps. SOL is still the weak one, down -11.8 bps, with selling pressure building again (P_z -0.66, dP -0.68/s, d2P negative). BTC is drifting the same way more mildly. This is typical pre-CPI quiet, not a regime change, and with the print 9 minutes out it is not a reason to rebuild inventory.
+
+RISK: I hold flatten through the 12:30 print. Afterwards I step BTC and ETH to widen once vol_ratio stays below 1.5 for 60s and spreads are back to baseline (BTC about 0.014, ETH 0.025, SOL 0.067 bps). SOL stays flatten if its P_z falls below -1.5 or it trades its own |move_z| above 3 before the print. Any |move_z| above 4 resets the clock.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: In the last 10 minutes before a CPI release, does an asset that has underperformed beforehand (like SOL now versus BTC) tend to move more after the print, or in a predictable direction? This would tell us whether to re-enter SOL later than BTC and ETH.
+
+[ 78.98s] round 7 @ sim 12:23 UTC (+0 findings, 0 alerts, data age ≤2.51s)
+VIEW: Vol has picked up again, with vol_ratio peaks of 1.4-1.7x versus about 0.7x last round. BTC fell 12 bps (move_z -2.36) on mild selling pressure, while SOL swung through a 42.8 bps range and its selling pressure eased (P_z -0.93, dP still negative). ETH's pressure is slightly positive despite the price dip, a divergence but not a signal. With CPI 6 minutes out, this is pre-print positioning noise, and there is no reason to add inventory into a binary event.
+
+RISK: Hold flatten through 12:30. Afterwards, step BTC and ETH to widen once vol_ratio stays below 1.5 for 60s and spreads are at baseline (BTC 0.014, ETH 0.025, SOL 0.067 bps). SOL stays flatten an extra cycle if its P_z falls below -1.5 or |move_z| exceeds 3. Any |move_z| above 4 restarts the 60s clock.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: Does a vol_ratio pickup and directional drift in the 5-10 minutes before CPI (like BTC -12 bps now) predict the direction or size of the first post-print move, or is it uninformative positioning noise?
+
+[ 86.92s] round 8 @ sim 12:26 UTC (+0 findings, 3 alerts, data age ≤0.50s)
+VIEW: Pre-CPI chop has intensified. In the last 2 minutes BTC and ETH printed move_z -4.6 and -4.3 sell-offs (-17 and -24 bps), and SOL swung through a 79 bps range, with vol_ratio peaks of 2.6-3.9x versus 1.4-1.7x last round. The current snapshot has cooled (vol_ratio 0.65-1.23, P_z near zero, spreads at baseline), but this is a lull 3 minutes before a binary print, not a regime change. The |move_z| > 4 alerts also restart the post-print 60s clock.
+
+RISK: Hold flatten through 12:30. Afterwards, step BTC and ETH to widen only once vol_ratio stays below 1.5 for 60s with no |move_z| above 4 and spreads at baseline. SOL waits an extra cycle if P_z falls below -1.5 or |move_z| exceeds 3. A pre-print move above 30 bps in BTC would suggest leaked or front-run positioning and would keep all three on flatten until 12:33 at the earliest.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: After pre-CPI sell-offs with |move_z| above 4 in BTC and ETH, is the first 60s post-print move larger or more likely to reverse than after quiet pre-print windows?
+
+[ 93.99s] round 9 @ sim 12:28 UTC (+0 findings, 0 alerts, data age ≤2.44s)
+VIEW: About 60s before CPI, ETH and SOL bounced (+12 and +8 bps; ETH move_z 2.1) and buy pressure is rising (P_z +1.0 to +1.65, dP positive), while BTC is flat at -0.9 bps but still erratic, with vol_ratio peaking at 2.4x. Spreads are at baseline, but this is positioning into a binary print, not calm. No pre-print move reached the 30 bps leak threshold, so the plan stays as set.
+
+RISK: Hold flatten through 12:30:00. After the print, step BTC and ETH to widen only after 60s with vol_ratio below 1.5, no |move_z| above 4 and baseline spreads. SOL waits an extra cycle if P_z falls below -1.5 or |move_z| exceeds 3. A first-minute move above 50 bps, or spreads blowing out more than 5x, keeps all three on flatten until 12:33 or later.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: When buy pressure builds (P_z rising toward +1.5) in the final minute before CPI, does the first post-print move tend to continue in that direction or reverse it as positioning unwinds?
+
+[103.70s] round 10 @ sim 12:31 UTC (+0 findings, 6 alerts, data age ≤0.50s)
+VIEW: The CPI print set off a sharp, broad rally in the first minute: BTC +34.7, ETH +51.6 and SOL +84.2 bps, all at move_z of about 5. In the second minute prices stalled (BTC -0.1, ETH +1.7, SOL +10.4 bps), and buy pressure is fading (P_z down to 0.1–0.7, dP negative on all three). Volatility is still running 2–3x baseline, so conditions are not normal yet. SOL and ETH both moved more than 50 bps in the first minute, which triggers the hold-flatten-until-12:33 rule, and vol_ratio is still above 1.5 everywhere.
+
+RISK: At 12:33, move BTC and ETH to widen if vol_ratio is below 1.5 (or falling steadily below 2), |move_z| is below 2 and spreads stay at baseline. SOL waits a further cycle unless its vol_ratio is below 1.5 and P_z holds above -1.5. If P_z flips below -1.5 with negative d2P, the rally is unwinding, so keep all three on flatten.
+
+STANCE: btc=flatten eth=flatten sol=flatten
+
+RESEARCH: After a CPI-driven rally of more than 5 std across crypto, how much of the first-minute move typically retraces over the next 5–15 minutes, and does high-beta SOL retrace more than BTC?
+
+[113.36s] round 11 @ sim 12:34 UTC (+0 findings, 3 alerts, data age ≤1.21s)
+VIEW: Post-CPI trading whipsawed between 12:33 and 12:34. BTC rose 57 bps and then fell 50 bps in back-to-back minutes, and ETH and SOL hit vol peaks of 5.2x and 2.6x. The latest minute has calmed: vol_ratio is back to 0.99–1.23, |move_z| is below 1.4, spreads are at baseline and P_z is close to neutral. All three meet the step-down criteria I set last round, but the two-sided swings mean flow is still unsettled, so normal quoting is premature.
+
+RISK: Go back to flatten on any symbol if vol_ratio goes above 2.5, |move_z| goes above 3, or P_z drops below -1.5 with negative d2P, which would signal a renewed unwind. Move BTC and ETH to normal if vol_ratio stays below 1.3 and |P_z| stays below 1 for two more rounds. SOL needs move_z below 1 as well before it moves to normal.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: Once vol_ratio first returns below 1.5 after a CPI print, how likely is a second volatility spike (a vol_ratio above 3) within the next 10–20 minutes, and does it depend on whether the initial move was a one-way trend or a whipsaw?
+
+[122.39s] round 12 @ sim 12:37 UTC (+0 findings, 0 alerts, data age ≤1.86s)
+VIEW: Snapshots are calm: vol_ratio is 0.82–1.0, |P_z| is below 0.85 and spreads are at baseline. But the 2-minute path still peaked at 1.5x for BTC, 1.6x for ETH and 2.5x for SOL, so the step-down condition (vol below 1.3 sustained) was not met and the two-round count restarts now. SOL is the weak spot: its vol peak sat at the 2.5x flatten line, its last chunk fell 14.9 bps, P_z is -0.84 with dP and d2P both negative, and a renewed sell-side unwind would show up there first.
+
+RISK: Flatten any symbol if vol_ratio goes above 2.5, |move_z| goes above 3, or P_z drops below -1.5 with negative d2P. SOL is closest to that trigger, since P_z is drifting down and accelerating. Move BTC and ETH to normal after two rounds in which the path vol peak stays below 1.3 and |P_z| stays below 1. SOL also needs |move_z| below 1 and its path range below 30 bps.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: After a CPI print, does SOL's post-event vol decay lag BTC's and ETH's by a consistent margin, and does a negative SOL pressure drift while BTC is neutral predict a SOL-led second leg down within 15 minutes?
+
+[133.34s] round 13 @ sim 12:40 UTC (+0 findings, 0 alerts, data age ≤1.89s)
+VIEW: Vol cooled further. Path peaks were 1.0x for BTC, 1.3x for ETH and 1.4x for SOL, and the snapshots sit at 0.84–0.85x with baseline spreads. But pressure swung both ways during the window: BTC ranged -1.1 to +1.3, ETH -1.3 to +1.6, and SOL dipped to -2.0 before recovering to +0.62. SOL's range was still 51 bps, so none of the symbols met the step-down conditions and the two-round count does not advance. ETH's P_z is now +1.57 with positive dP, a mild buy imbalance to watch for adverse fills on our offers.
+
+RISK: Flatten any symbol if vol_ratio goes above 2.5, |move_z| goes above 3, or P_z drops below -1.5 with negative d2P. SOL is still the most likely, since it already touched -2.0 and its d2P is negative now. Move BTC to normal after two rounds in which the path vol peak stays below 1.3 and the path |P_z| stays below 1; BTC's vol already qualifies, so pressure is the only blocker. ETH needs the same vol and pressure conditions, and SOL additionally needs |move_z| below 1 and its path range below 30 bps.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: In the 10–20 minutes after CPI, do sustained one-sided ETH P_z readings above 1.5 while vol is below baseline predict continuation, meaning adverse selection on our asks, or mean reversion over the next 5 minutes?
+
+[143.07s] round 14 @ sim 12:44 UTC (+0 findings, 0 alerts, data age ≤0.84s)
+VIEW: Vol cooled further on BTC and ETH (0.53x and 0.55x), but BTC pressure has flipped to P_z -1.71 with dP -0.72, a sell imbalance building at low vol. SOL rallied +34 bps over a 68 bps range with vol back to baseline (1.03x). No symbol met the step-down conditions: BTC's path |P_z| reached 1.7, ETH's vol peaked at 1.4x and SOL's range was far above 30 bps, so the two-round count resets.
+
+RISK: Flatten BTC if its d2P turns negative while P_z stays below -1.5, since that is the existing trigger and today d2P (+0.0008) is the only thing holding it off. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3. ETH and SOL step down only after two rounds with path vol peak below 1.3 and path |P_z| below 1, and SOL also needs a path range below 30 bps and |move_z| below 1.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: About 15 minutes after CPI, when BTC P_z is below -1.5 with negative dP but vol is under 0.6x baseline, does the selling lead to a price drop within 5 minutes, or does it get absorbed without moving price?
+
+[151.71s] round 15 @ sim 12:47 UTC (+0 findings, 0 alerts, data age ≤1.56s)
+VIEW: BTC hit last round's flatten trigger. d2P flipped from +0.0008 to -0.0095 while P_z deepened to -2.12 with dP -0.76, so the sell imbalance is now speeding up rather than fading, even at low vol (0.58x). ETH (P_z -1.96, d2P -0.003) and SOL (P_z -1.90, move_z -1.59, chunk -30 bps) show the same selling across all three, which makes a correlated move more likely than isolated BTC flow.
+
+RISK: Flatten ETH if its P_z goes below -2.0 with d2P still negative. Flatten SOL if |move_z| goes above 2 or vol_ratio goes above 1.5 with P_z below -1.5. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3. Return BTC to widen only once P_z is above -1.5 and d2P is positive for a full round.
+
+STANCE: btc=flatten eth=widen sol=widen
+
+RESEARCH: When BTC, ETH and SOL all hold P_z below -1.8 at the same time with negative d2P during a low-vol post-CPI drift, how often does a move of more than 25 bps follow within 5 minutes, and does SOL lead or lag BTC?
+
+[163.29s] round 16 @ sim 12:50 UTC (+0 findings, 0 alerts, data age ≤1.20s)
+VIEW: The broad selling has unwound. BTC P_z recovered from -2.12 to +0.05 and ETH from -1.96 to -0.45, all three rose 6-10 bps, and vol is subdued (0.45-0.63x). SOL is the exception: P_z is back down to -1.38 with dP -0.79 and d2P -0.019, so its sell pressure is rebuilding and speeding up. Its 52 bps range and 1.3x vol peak show it is still the jumpiest name about 20 minutes after CPI.
+
+RISK: Flatten SOL if its P_z goes below -1.8 with d2P still negative, if |move_z| goes above 2, or if vol_ratio goes above 1.5. Move BTC to widen next round if its P_z stays above -1.5 and d2P turns positive; today's -0.0012 is near zero but still misses that condition. Move ETH to normal if its P_z stays within ±0.5 and vol_ratio stays below 0.8 for a full round. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3.
+
+STANCE: btc=flatten eth=widen sol=widen
+
+RESEARCH: After CPI, when BTC and ETH sell pressure reverses but SOL's P_z deepens again with negative d2P, how often does SOL follow through with a move of more than 25 bps within 5 minutes, compared with mean-reverting toward BTC?
+
+[174.12s] round 17 @ sim 12:54 UTC (+0 findings, 0 alerts, data age ≤0.77s)
+VIEW: The BTC condition is now met. P_z held between -1.4 and +0.6 all round, sits at -0.34, and d2P has turned positive (+0.0243), so BTC steps down to widen. SOL fell another 20.6 bps across a 44 bps range, but its sell pressure faded to P_z -0.36 instead of rebuilding toward -1.8, and vol is 0.68x, so the drift looks like a price move without flow behind it rather than a cascade. ETH missed its normal condition, with P_z ranging from -1.5 to +0.8 and vol peaking at 1.3x, so it stays at widen.
+
+RISK: Flatten SOL if |move_z| goes above 2, vol_ratio goes above 1.5, or P_z goes below -1.8 with d2P negative. Return BTC to flatten if its P_z drops below -1.5 or vol_ratio goes above 1.2. Move ETH to normal if its P_z stays within ±0.5 and vol_ratio stays below 0.8 for a full round. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: After CPI, when SOL falls more than 20 bps in 3 minutes while its P_z stays near zero and BTC and ETH are flat, does the gap to BTC close within 10 minutes, or does it keep drifting? In other words, does a SOL move without pressure behind it tend to reverse?
+
+[185.97s] round 18 @ sim 12:57 UTC (+0 findings, 0 alerts, data age ≤2.59s)
+VIEW: All three reversed higher together (BTC +19.8, ETH +17.3, SOL +29.8 bps) and pressure flipped to buying, so SOL's earlier drop was retraced by a broad rally rather than continuing as a cascade. BTC hit my flatten trigger: vol_ratio peaked at 1.3x, above the 1.2 line. I'm applying it even though current vol is 0.76x and P_z is a healthy +1.13. ETH and SOL stay at widen. SOL's move_z of 1.92 is close to the 2 limit, and ETH's P_z ranged ±1.0 with vol peaking at 1.3x, which misses its normal condition.
+
+RISK: Flatten SOL if |move_z| goes above 2, vol_ratio goes above 1.5, or P_z goes above +2 or below -1.8 with d2P in the same direction. Return BTC to widen if vol_ratio stays below 1.0 and |P_z| below 1.5 for a full round. Move ETH to normal if its P_z stays within ±0.5 and vol_ratio stays below 0.8 for a full round. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3.
+
+STANCE: btc=flatten eth=widen sol=widen
+
+RESEARCH: About 25 minutes after CPI, when BTC, ETH and SOL rebound together by 15-30 bps with P_z rising to about +1 to +1.5 at normal vol, does the move keep going over the next 10 minutes or fade back?
+
+[195.28s] round 19 @ sim 13:01 UTC (+0 findings, 0 alerts, data age ≤2.44s)
+VIEW: The post-CPI rebound faded, and all three gave back 5-7 bps. BTC saw a sharp sell-pressure spike to P_z -3.4 with vol peaking at 1.1x, so the rally was not a clean continuation. SOL now hits my flatten trigger: P_z is +2.08, above +2, and d2P is positive at +0.021, so pressure is still building. SOL's range of 39 bps is also roughly double the others.
+
+RISK: Return SOL to widen if P_z falls back below +1.5 with d2P turning negative and vol_ratio stays under 1.0. Return BTC to widen if vol_ratio stays below 1.0 and |P_z| below 1.5 for a full round. Move ETH to normal if its P_z stays within ±0.5 and vol_ratio stays below 0.8 for a full round. Flatten ETH if vol_ratio goes above 1.5 again with |P_z| above 1.8. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3.
+
+STANCE: btc=flatten eth=widen sol=flatten
+
+RESEARCH: About 30 minutes after CPI, when SOL's P_z goes above +2 at below-normal vol while BTC and ETH pressure stays neutral, does SOL lead a broader move or mean-revert relative to BTC over the next 5-10 minutes?
+
+[205.39s] round 20 @ sim 13:04 UTC (+0 findings, 0 alerts, data age ≤2.74s)
+VIEW: Vol has calmed across the board, with current vol_ratio at 0.6-0.7x, but prices drifted lower: BTC fell 16 bps, SOL 14 bps and ETH 9 bps. BTC's sell spike did not recur, as its P_z held within ±0.5, while SOL's buy pressure persisted near +1.9 against its falling price. SOL's d2P has turned negative, so its pressure is peaking, but SOL still diverges from price and its vol hit 1.3x mid-round.
+
+RISK: Move SOL to widen once P_z drops below +1.5 with d2P still negative and vol_ratio under 1.0 for a full round. Move ETH to normal if P_z stays within ±0.5 and vol_ratio stays below 0.8 for a full round. Re-flatten BTC if |P_z| goes above 2 or vol_ratio goes above 1.3 alongside a further drop of more than 15 bps. Flatten any symbol if vol_ratio goes above 2.5 or |move_z| goes above 3.
+
+STANCE: btc=widen eth=widen sol=flatten
+
+RESEARCH: Post-CPI, when SOL shows persistent buy pressure (P_z near +2) while its price falls with BTC, does that pressure signal absorption that comes before a sharp catch-up rally, or passive bids that get swept on the next leg down?
+
+[216.88s] round 21 @ sim 13:08 UTC (+0 findings, 1 alerts, data age ≤0.85s)
+VIEW: SOL fell another 41 bps on a 72 bps range, and its vol spiked to 3.2x mid-round. Its earlier buy pressure has faded to P_z +0.7 with dP and d2P both negative, which looks more like bids getting swept than absorption. ETH stayed flat on net, but its vol spiked to 3.0x mid-round, breaching my 2.5x flatten rule even though it now reads 0.69x. BTC was contained, with vol peaking at 1.0x and P_z within ±1.5, but it drifted down another 2.5 bps.
+
+RISK: Return SOL to widen once vol_ratio stays below 1.0 and P_z stays within ±1 for a full round with no new low beyond -15 bps. Return ETH to widen if a full round passes without any vol_ratio spike above 1.5. Move BTC to flatten if vol_ratio goes above 1.3 alongside a drop of more than 15 bps, or if |P_z| goes above 2. Move BTC to normal only after a full round with vol_ratio below 0.8 and |P_z| below 0.5.
+
+STANCE: btc=widen eth=flatten sol=flatten
+
+RESEARCH: Post-CPI, do short vol spikes above 2.5x in ETH or SOL, while BTC vol stays near 1x, predict further idiosyncratic downside over the next 10 minutes, or do they mean-revert quickly?
+
+[227.88s] round 22 @ sim 13:12 UTC (+0 findings, 0 alerts, data age ≤0.33s)
+VIEW: All three recovered this round: BTC rose 30 bps, ETH 18 bps and SOL 20 bps. Vol has calmed, with current vol_ratio at 0.4–0.6x and round peaks of only 1.0–1.2x, and pressure is now mildly positive. ETH met its re-entry condition with no spike above 1.5x, so it steps down to widen. SOL narrowly missed its condition: vol peaked at 1.1x against the 1.0x limit and P_z reached +1.5 against the ±1 limit. BTC's 1.2x vol peak and P_z of +0.9 also keep it out of normal.
+
+RISK: Move SOL to widen after a full round with vol_ratio below 1.0 and |P_z| below 1. Move any symbol back to flatten if vol_ratio goes above 2.0, or if it gives back more than 20 bps with P_z below -1.5. Move BTC to normal after a full round with vol_ratio below 0.8 and |P_z| below 0.5. Move BTC to flatten if vol_ratio goes above 1.3 alongside a drop of more than 15 bps.
+
+STANCE: btc=widen eth=widen sol=flatten
+
+RESEARCH: After the post-CPI sell-off, does a synchronized cross-asset rebound of 20–30 bps on falling vol tend to hold over the next 15–30 minutes, or does it usually retrace toward the post-release lows?
+
+[240.85s] round 23 @ sim 13:15 UTC (+0 findings, 0 alerts, data age ≤2.32s)
+VIEW: Vol stayed contained this round. SOL peaked at only 0.9x and now sits at 0.57x while rallying 27.6 bps. Its P_z touched +1.0 and is now +1.03, a hair over the ±1 limit, but that is one-sided buy pressure on calm vol, so I'm overriding the hairline breach and moving SOL to widen. BTC's vol rose to 1.37x, above the 1.3 threshold, but its price is flat (+1 bps) with P_z drifting slightly negative, so the flatten condition (a drop of more than 15 bps) isn't met. ETH is steady at 0.89x with mild buy pressure.
+
+RISK: Move BTC to flatten if vol_ratio stays above 1.3 and it drops more than 15 bps, or if vol_ratio goes above 2.0. Move SOL back to flatten if its P_z goes above +1.5 with vol_ratio above 1.0, or if it gives back more than 20 bps with P_z below -1.5. Move ETH to normal after a full round with vol_ratio below 0.8 and |P_z| below 0.5.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: Around 45 minutes after CPI, when BTC vol rises while ETH and SOL vol fall, does that divergence lead a BTC-driven cross-asset move, or is it usually idiosyncratic BTC flow such as ETF or basis activity?
+
+[250.63s] round 24 @ sim 13:20 UTC (+0 findings, 0 alerts, data age ≤0.28s)
+VIEW: All three gave back gains together. BTC fell 19.7 bps and ETH 20.1 bps, and SOL erased its rally with a 37.7 bps drop over a 63 bps range, so the earlier BTC-only vol divergence resolved into a broad selloff. Vol has since calmed (current ratios 0.4–0.57x after peaks of 1.0–1.5x) and pressure is near neutral except ETH at P_z −0.98. That looks like orderly repricing rather than a disorderly cascade.
+
+RISK: BTC goes to flatten if vol_ratio holds above 1.3 together with another drop of more than 15 bps, or if vol_ratio spikes above 2.0. That nearly happened this round (peak 1.4x, −19.7 bps), but the vol was not sustained. SOL goes to flatten if vol_ratio is above 1.0 and P_z moves beyond ±1.5. ETH goes to flatten if P_z falls below −1.5 while vol_ratio rises above 1.0. Any symbol can return to normal after a full round with vol_ratio below 0.8 and |P_z| below 0.5.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: About 50 minutes after CPI, when a synchronized cross-asset drop of roughly 20–40 bps occurs on falling vol, does it tend to extend (a delayed macro repricing) or mean-revert within the next 15 minutes?
+
+[259.13s] round 25 @ sim 13:23 UTC (+0 findings, 0 alerts, data age ≤1.05s)
+VIEW: The broad selloff stalled this round: BTC and ETH were flat (+0.9 and +0.4 bps), while SOL drifted down another 7.2 bps across a 24.6 bps range. Vol is subdued (ratios 0.40–0.66x), but BTC pressure has built to P_z −2.49 with steady negative dP and only a brief vol peak of 1.2x. That is one-sided selling into a quiet book, which can come before a fresh leg down. ETH is close to the return-to-normal criteria (vol 0.4x, |P_z| 0.34, peak 0.8x), but one clean snapshot doesn't make a full calm round yet.
+
+RISK: BTC goes to flatten if vol_ratio rises above 1.3 while P_z stays below −2, or if it drops more than 15 bps in a round. ETH goes to normal next round if vol stays below 0.8 and |P_z| stays below 0.5 the whole round. SOL goes to flatten if vol_ratio rises above 1.0 together with |P_z| above 1.5, or if it extends its slide by more than another 20 bps.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: When BTC P_z holds below −2 while vol_ratio stays under 0.5 (heavy pressure on low vol), how often does a vol expansion with more than 15 bps of further downside follow within 5 minutes, compared with the pressure simply being absorbed?
+
+[269.84s] round 26 @ sim 13:26 UTC (+0 findings, 0 alerts, data age ≤0.55s)
+VIEW: BTC's heavy selling pressure (P_z −2.49) was absorbed rather than extended: BTC rallied +22.9 bps, P_z swung to +1.6 before settling at −0.23, and vol peaked at only 1.1x. All three rose together. SOL now shows one-sided buying on a quiet book (P_z 1.97, vol 0.67x), the mirror of last round's BTC setup. ETH missed the return-to-normal test because vol peaked at 0.9x and P_z reached +1.2.
+
+RISK: BTC goes to normal if it has a full round with vol_ratio below 0.9, |P_z| below 0.8 and range under 15 bps. It goes to flatten if vol_ratio rises above 1.3 with |P_z| above 2. ETH goes to normal under the same calm-round test. SOL goes to flatten if vol_ratio rises above 1.0 while |P_z| stays above 1.5, or if it moves more than 25 bps in a round in either direction.
+
+STANCE: btc=widen eth=widen sol=widen
+
+RESEARCH: After a sharp reversal where P_z swings from below −2 to above +1.5 within 2 minutes, how often does the reversal continue past 20 bps versus fading back to the prior level within the next 5 minutes?
+
+[280.32s] round 27 @ sim 13:29 UTC (+0 findings, 0 alerts, data age ≤2.26s)
+VIEW: SOL hit its flatten trigger with +42.1 bps this round, above the 25 bps limit, on steady one-sided buying (P_z +0.5 to +1.3) with vol at 1.22x. BTC selling pressure built back to P_z −2.09 and is still accelerating, but the current book is quiet (vol 0.52x) after a 2.2x spike. ETH is drifting lower at 1.3x vol with P_z −1.51 and accelerating, tracking BTC's selling rather than SOL's buying. CPI was released an hour ago, so this is post-event flow and not the release itself.
+
+RISK: BTC goes to flatten if vol_ratio is above 1.3 while |P_z| is above 2 at the same time; the 2.2x vol spike this round cannot be confirmed as coinciding with that pressure. BTC goes to normal after a full round with vol below 0.9, |P_z| below 0.8 and range under 15 bps. ETH goes to flatten if P_z falls below −2 with vol above 1.3. SOL goes back to widen after a round with a range under 20 bps and P_z below 1.0.
+
+STANCE: btc=widen eth=widen sol=flatten
+
+RESEARCH: When SOL rallies more than 40 bps in 2 minutes while BTC and ETH show net selling pressure (P_z below −1.5), how often does SOL give back more than half the move within the next 5 minutes?
+
+[287.35s] round 28 @ sim 13:29 UTC (+0 findings, 0 alerts, data age ≤11.73s)
+VIEW: No path summary, alerts or research arrived this round, and the snapshot values (BTC P_z −2.09, ETH −1.51, SOL +31.4 bps chunk) match what drove last round's call, so there is no fresh evidence to change stance. SOL is still above its 25 bps limit at move_z +2.13, which keeps it at flatten. BTC selling is still accelerating into a quiet book (vol 0.52x), and ETH at 1.3x vol is still drifting lower, so both stay wide until new data arrives.
+
+RISK: BTC goes to flatten if vol_ratio rises above 1.3 while |P_z| is above 2. ETH goes to flatten if P_z falls below −2 with vol above 1.3. SOL goes back to widen after a full new round with a range under 20 bps and P_z below 1.0. If the feed stays stale (age above 30s with no new path summary), all three symbols go one step more defensive.
+
+STANCE: btc=widen eth=widen sol=flatten
+
+RESEARCH: When BTC's P_z stays below −2 while its vol_ratio is below 0.6, how often does vol rise above 1.3 within the next 3 minutes, and in which direction does price break?
+
+=== rounds ===
+ round   at_s  llm_s sim_utc  data_age_s  new_findings  alerts     btc     eth     sol
+     0   7.81   5.37   12:00        1.00             0       0  normal  normal  normal
+     1  17.64   8.83   12:02        1.37             1       0   widen  normal  normal
+     2  26.39   7.75   12:05        2.20             3       1  normal  normal   widen
+     3  39.74  12.34   12:08        1.94             2       4   widen   widen flatten
+     4  53.07  12.33   12:13        0.28             1       1   widen flatten flatten
+     5  62.73   8.65   12:17        1.61             1       2 flatten flatten flatten
+     6  71.98   8.25   12:20        2.26             0       0 flatten flatten flatten
+     7  78.98   6.00   12:23        2.51             0       0 flatten flatten flatten
+     8  86.92   6.94   12:26        0.50             0       3 flatten flatten flatten
+     9  93.99   6.07   12:28        2.44             0       0 flatten flatten flatten
+    10 103.70   8.71   12:31        0.50             0       6 flatten flatten flatten
+    11 113.36   8.66   12:34        1.21             0       3   widen   widen   widen
+    12 122.39   8.03   12:37        1.86             0       0   widen   widen   widen
+    13 133.34   9.95   12:40        1.89             0       0   widen   widen   widen
+    14 143.07   8.72   12:44        0.84             0       0   widen   widen   widen
+    15 151.71   7.64   12:47        1.56             0       0 flatten   widen   widen
+    16 163.29  10.58   12:50        1.20             0       0 flatten   widen   widen
+    17 174.12   9.83   12:54        0.77             0       0   widen   widen   widen
+    18 185.97  10.86   12:57        2.59             0       0 flatten   widen   widen
+    19 195.28   8.31   13:01        2.44             0       0 flatten   widen flatten
+    20 205.39   9.11   13:04        2.74             0       0   widen   widen flatten
+    21 216.88  10.49   13:08        0.85             0       1   widen flatten flatten
+    22 227.88  10.00   13:12        0.33             0       0   widen   widen flatten
+    23 240.85  11.97   13:15        2.32             0       0   widen   widen   widen
+    24 250.63   8.78   13:20        0.28             0       0   widen   widen   widen
+    25 259.13   7.50   13:23        1.05             0       0   widen   widen   widen
+    26 269.84   9.71   13:26        0.55             0       0   widen   widen   widen
+    27 280.32   9.48   13:29        2.26             0       0   widen   widen flatten
+    28 287.35   7.03   13:29       11.73             0       0   widen   widen flatten
+
+=== did the stance anticipate risk? (next 5 sim-min after it arrived; risky = fwd vol >= 1.5x ref) ===
+        fwd_vol_x_ref       fwd_max_move_bps      
+                 mean count             mean count
+stance                                            
+flatten          2.02    32            47.52    32
+normal           1.19     7            47.34     7
+widen            1.24    48            26.46    48
+risky windows: 29 of 87
+  analyst  caught 28, missed 1, cautious-but-quiet 52  (recall 97%, precision 35%)
+  rule     caught 18, missed 11, cautious-but-quiet 8  (recall 62%, precision 69%)
+decision lag (sim seconds from data to stance): median 180s, max 240s
+saved runs/20261029-110219_{scores,rounds}.csv
+
+first analyst view at 7.8s; research calls 8 (73s agent time); wall 287s

@@ -1,0 +1,34 @@
+{
+ "day": "2024-03-11",
+ "speed": 20.0,
+ "pipeline": "time to first agent decision   8.1s\nagent rounds                   45 (median 4.5s each)\ndata age at agent read         median 1.51s, max 3.00s\nfast-path evaluations          275 (p50 5 us, p99 34 us; decision changed 21x)\nsource snapshots               261 (collector:btc 87, collector:eth 87, collector:sol 87)\nticks processed                156,600 (603/s wall)\nprocessing cost                median 3.43 us/tick\nresearch findings              8 (median 9s each, run concurrently)\nwall time                      260s",
+ "policies": {
+  "rule": {
+   "recall": 0.0,
+   "precision": 0.0,
+   "quiet_cautious": 5,
+   "flatten_n": 0,
+   "flatten_severe": NaN,
+   "normal_fwd_vol": 0.8208162387132081,
+   "cautious_fwd_vol": 1.050815277654378
+  },
+  "agent": {
+   "recall": 0.0,
+   "precision": 0.0,
+   "quiet_cautious": 5,
+   "flatten_n": 0,
+   "flatten_severe": NaN,
+   "normal_fwd_vol": 0.8208162387132081,
+   "cautious_fwd_vol": 1.050815277654378
+  },
+  "final": {
+   "recall": 0.0,
+   "precision": 0.0,
+   "quiet_cautious": 5,
+   "flatten_n": 0,
+   "flatten_severe": NaN,
+   "normal_fwd_vol": 0.8208162387132081,
+   "cautious_fwd_vol": 1.050815277654378
+  }
+ }
+}

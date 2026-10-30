@@ -1,0 +1,294 @@
+replaying 54,001 ticks (90 sim-min) at 20x ≈ 270s wall
+
+[  8.61s] round 0 @ sim 12:00 UTC (+0 findings, 0 alerts, data age ≤1.00s)
+VIEW: First round. All three dropped about 8-11 bps in the last minute, and vol briefly peaked near 2x reference (SOL 2.1x). Current vol has already come back to roughly normal (0.87-1.15x), and order-flow pressure is ordinary noise (|P_z| < 1). No release is scheduled, so I don't expect next-5-minute vol of 1.5x or more.
+
+RISK: I would widen if vol_x_ref rises back above about 1.5x, if a renewed one-directional move happens with |P_z| > 2, or if the selloff continues past roughly 20-30 bps. SOL is the first to watch, since its range and peak vol are the highest.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Was the synchronized ~10 bps drop across BTC/ETH/SOL near 12:00 driven by a news headline or a large liquidation, and did it come with a spike in funding or open interest?
+
+[ 19.23s] round 1 @ sim 12:02 UTC (+0 findings, 0 alerts, data age ≤2.16s)
+VIEW: The prior dip reversed into a sharp correlated rally: BTC rose 39 bps, ETH 24 bps and SOL 47 bps in one minute, with 49-61 bps ranges and vol peaking near 2.1x. Current vol is still elevated in ETH (1.65x) and near the threshold in BTC (1.46x, with a 1.97σ last chunk). SOL's vol reads 0.86x, but its last chunk moved 21 bps and it tracks the same cross-asset swing. Order-flow pressure is ordinary (|P_z| < 1) and pressure is decaying, so this looks like price-led volatility clustering rather than a flow shock, but next-5-minute vol of 1.5x or more is plausible.
+RISK: I would return to normal if vol_x_ref drops below about 1.2x across all three and chunk moves fall under 1σ for the next round. I would flatten if vol pushes above 3x, |P_z| breaks above 2 in the direction of the move, or ranges expand further (another 50+ bps leg).
+STANCE: btc=widen eth=widen sol=widen
+RESEARCH: Is there an unscheduled catalyst (headline, large liquidation cascade, or index or spot-ETF flow) behind the synchronized 12:01-12:03 drop-then-rally across BTC, ETH and SOL?
+
+[ 28.21s] round 2 @ sim 12:06 UTC (+3 findings, 1 alerts, data age ≤0.75s)
+VIEW: BTC and ETH have calmed to 0.77x and 0.93x reference with ordinary pressure (|P_z| ≈ 1), so the volatility cluster from last round has faded in both. SOL was the outlier: +45 bps over the window, with a 4.2x vol spike at 12:04:59. It now reads 1.1x, but the last chunk still peaked at 1.69x, which is consistent with lingering post-burst clustering rather than a full return to quiet. Its flow is neutral (P_z 0.46), so this looks like an isolated SOL burst, not a cross-asset shock.
+RISK: I would widen BTC/ETH if vol_x_ref rises back above about 1.4x or |P_z| exceeds 2 on a renewed move. I would return SOL to normal if its chunk vol and max stay under about 1.3x next round. I would flatten SOL if it breaks out again with a vol peak above 3x or signs of a liquidation cascade.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: After an isolated SOL-only vol burst of 4x or more with neutral order-flow pressure, how quickly does SOL realized vol decay back below 1.5x reference, and does BTC/ETH vol follow?
+
+[ 37.06s] round 3 @ sim 12:09 UTC (+1 findings, 0 alerts, data age ≤0.72s)
+VIEW: BTC and ETH stay quiet at 0.48x and 0.54x reference with ordinary flow, and research found no headline or liquidation behind the 12:00 drop, so they stay normal. SOL had a second burst this window, peaking at 2.3x after the earlier 4.2x, with a 35.8 bps range. It still sits at 1.29x after a -17 bps last chunk, so its vol is clustering and has not decayed to quiet.
+
+RISK: I would go back to normal on SOL if it prints a couple of chunks below about 1.1x with no new burst. I would move to flatten if SOL vol tops 3x with |P_z| above 2. I would widen BTC/ETH if they rise above 1.5x together with SOL, which would signal a cross-asset move.
+
+STANCE: btc=normal eth=normal sol=widen
+
+RESEARCH: Is there SOL-specific flow behind the repeated bursts at 12:05 and 12:08–12:10, such as a large spot or perp liquidation, a token unlock, or a DEX/validator event?
+
+[ 45.62s] round 4 @ sim 12:12 UTC (+2 findings, 0 alerts, data age ≤0.57s)
+VIEW: SOL vol has fallen to 0.57x reference. The window peaked at only 1.7x, down from 2.3x and 4.2x earlier, and order flow is neutral (P_z -0.08), so the cluster has largely decayed and I no longer expect 1.5x+ over the next 5 minutes. BTC (0.44x) and ETH (0.56x) remain quiet. ETH's P_z of 2.81 is rising (dP +0.95/s) with a +7.8 bps chunk, which is worth watching but is not a vol signal on its own. Research found no catalyst behind the 12:01 move, which supports a market-structure explanation.
+RISK: I would widen SOL again if its vol_x_ref goes back above 1.3x or it has another 20+ bps chunk. I would widen ETH if P_z keeps building past 3.5 and vol_x_ref goes above 1.2x. I would widen all three if BTC vol goes above 1.5x, which would mean the shock is spreading across the market.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: When ETH order-flow pressure builds to P_z near 3 with low vol and positive acceleration, how often does a 1.5x+ vol expansion follow within 5 minutes?
+
+[ 54.44s] round 5 @ sim 12:15 UTC (+0 findings, 0 alerts, data age ≤0.13s)
+VIEW: All three drifted lower together over the last two minutes: BTC -10 bps, ETH -7 bps, SOL -31 bps. Current vol is still subdued at 0.47-0.59x reference and window peaks were only 1.0-1.3x. Pressure is mildly negative on all three (P_z about -1 to -1.6), which is within noise, so this looks like an orderly correlated drift rather than a disorderly move. No scheduled events.
+
+RISK: Any symbol's vol_x_ref moving above 1.5x would change my stance. So would P_z breaking below -2 with accelerating dP, or SOL's selling extending into a fast leg. Any of these would prompt a widen on the affected symbol.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Is there a news or liquidation driver behind SOL underperforming BTC/ETH by about 20 bps in this down-drift, such as large SOL perp liquidations or exchange-specific flows?
+
+[ 61.38s] round 6 @ sim 12:17 UTC (+1 findings, 0 alerts, data age ≤2.94s)
+VIEW: The correlated drift lower continued, with BTC -19, ETH -16 and SOL -14 bps over the minute. Vol stayed subdued: current 0.61-0.78x reference and window peaks 1.0-1.2x. Pressure is back near neutral (BTC P_z -1.0, ETH +0.1, SOL -0.3) after briefly touching -2.0 on BTC. New research found no SOL-specific catalyst, so this reads as an orderly broad-market grind rather than a disorderly event.
+
+RISK: I would widen if vol_x_ref climbs above about 1.5x on any symbol, if |P_z| holds above 2-3 with accelerating dP or larger move_z, or if the cumulative drop speeds up into one-sided chunks of more than 30 bps per minute.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Is there a broad crypto or macro driver for the coordinated ~1% decline since 12:00 UTC on Oct 29, such as a large BTC spot or ETF outflow, a major exchange liquidation cascade, or equity-futures weakness?
+
+[ 68.25s] round 7 @ sim 12:20 UTC (+0 findings, 0 alerts, data age ≤0.88s)
+VIEW: The prior drift lower reversed into a correlated bounce: BTC +24, ETH +9 and SOL +40 bps over two minutes. SOL's window vol peaked at 1.6x and ETH's at 1.5x, but both were brief, and current vol has settled to 0.43-0.68x reference. Pressure is neutral everywhere (|P_z| ≤ 0.75) and no event is scheduled, so this was an orderly rebound and next-5-minute vol should stay below 1.5x.
+RISK: I would widen if vol_x_ref holds at 1.5x or higher on any symbol, especially SOL given its larger range. I would also widen on a sharp, disorderly move with |P_z| above 2 and accelerating derivatives, or on breaking news.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is SOL's higher beta to BTC on intraday reversals (40 vs 24 bps) a persistent pattern that justifies tighter vol triggers for SOL?
+
+[ 75.43s] round 8 @ sim 12:22 UTC (+0 findings, 0 alerts, data age ≤1.73s)
+VIEW: The minute was calm. BTC +2, ETH +3 and SOL +12 bps, with current vol at 0.61-0.71x reference. BTC's brief 1.4x window peak and SOL's 1.2x both faded. Pressure is ordinary everywhere (|P_z| ≤ 1.6 across the window, ≤ 1.0 now), and with no scheduled events there is no basis to expect 1.5x vol in the next 5 minutes.
+RISK: I would widen the affected names if vol_x_ref sustains above 1.5x, if |P_z| breaks above 2 with accelerating dP, or if a disorderly multi-symbol move of 30+ bps develops in a minute.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: none
+
+[ 82.77s] round 9 @ sim 12:24 UTC (+0 findings, 0 alerts, data age ≤2.92s)
+VIEW: Another quiet minute. BTC is +8 and ETH +7 bps, while SOL is flat at -1 bps over a 22 bps range. Vol peaked at only 1.1x and is now 0.23-0.92x reference. SOL's last chunk of -13 bps with P_z -1.56 is the most notable item, but it is still within ordinary noise, and with no scheduled events there is no basis to expect 1.5x vol.
+RISK: I would widen if SOL's selling pressure builds past |P_z| 2 with vol_x_ref above 1.5, or if a disorderly move or an unscheduled headline hits any symbol.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does persistent negative SOL pressure (P_z -1.5 with falling dP) that diverges from BTC/ETH tend to come before SOL-specific vol bursts within 5 minutes?
+
+[ 89.15s] round 10 @ sim 12:27 UTC (+0 findings, 0 alerts, data age ≤1.25s)
+VIEW: Another quiet two minutes. All three drifted higher (BTC +14, ETH +9, SOL +13 bps), and vol now sits at 0.35-0.62x reference. ETH briefly touched 1.5x vol with P_z up to +2.9, but both have already faded (vol 0.35x, P_z 0.89). With no scheduled events, nothing points to elevated vol in the next 5 minutes.
+RISK: Widen if any symbol's vol_x_ref holds at 1.5x or higher, or if a sustained |P_z| above 3 comes with a disorderly move. ETH is the one to watch for a repeat of its pressure burst.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do ETH's short P_z bursts near +3 with brief vol spikes tend to come before larger moves within 5-10 minutes, or do they reliably fade?
+
+[ 96.02s] round 11 @ sim 12:29 UTC (+0 findings, 0 alerts, data age ≤1.63s)
+VIEW: Another quiet minute with a broad grind higher: BTC +22, ETH +13, SOL +10 bps. BTC's vol peaked at only 1.4x and is now 0.5x. Pressure is ordinary everywhere (|P_z| ≤ 1.4), and SOL's +13.5 bps last chunk is still under 1 sigma. No scheduled events and no disorderly move, so there's no basis for expecting 1.5x vol over the next 5 minutes.
+RISK: I would widen if vol_x_ref holds above ~1.5x, if |P_z| breaks above ~2.5 with accelerating dP, or if any symbol makes a sharp multi-sigma move, especially a correlated one across all three. An unscheduled headline would also do it.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does a steady correlated drift across BTC/ETH/SOL with low vol tend to come before a volatility breakout in the next 5-15 minutes, or does it usually stay orderly?
+
+[102.75s] round 12 @ sim 12:31 UTC (+0 findings, 0 alerts, data age ≤2.49s)
+VIEW: BTC and ETH stayed quiet, with vol at 0.38-0.39x ref and |P_z| under 1. SOL is the only thing that moved: it drifted down 10.7 bps, vol rose to 1.38x ref (peak 1.45x), and P_z touched -2.05. That P_z is right at the noise boundary, and the move is under 1 sigma. Nothing is scheduled and the move is orderly, so I don't expect 1.5x vol over the next 5 minutes.
+
+RISK: I would widen SOL if its vol_x_ref holds above 1.5x or P_z pushes past -2.5 with accelerating dP_per_s. I would also widen if BTC or ETH show sell pressure that confirms SOL's.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Does SOL-only selling pressure with P_z around -2, while BTC and ETH stay flat, tend to come before higher SOL vol in the next 5 minutes, or does it usually fade?
+
+[110.21s] round 13 @ sim 12:34 UTC (+0 findings, 0 alerts, data age ≤0.22s)
+VIEW: All three symbols are quiet now, with vol at 0.56-0.61x ref. SOL's intrawindow vol peak of 1.9x was brief and has already faded, so it doesn't carry forward. SOL P_z is at +2.0 and BTC moved -14 bps in the last chunk (move_z -1.4), but both are within noise, and nothing is scheduled. I don't expect 1.5x vol over the next 5 minutes.
+RISK: I would widen that symbol if vol_x_ref sustained above 1.5x, SOL P_z pushed past +3 with accelerating moves, or BTC's selloff extended past 2 sigma with spillover into ETH and SOL.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's short vol spikes (1.5-2x, under a minute) predict elevated vol over the next 5 minutes, or do they usually mean-revert?
+
+[116.40s] round 14 @ sim 12:36 UTC (+0 findings, 1 alerts, data age ≤1.68s)
+VIEW: ETH spiked to 3.7x ref inside the window, but current vol is back to 1.02x, so the burst has already faded. BTC and ETH both rose about 18 bps in an orderly way. BTC vol is 0.75x and SOL is 0.5x. All P_z values are well inside noise and nothing is scheduled, so I don't expect 1.5x vol over the next 5 minutes.
+RISK: I would widen ETH, and possibly BTC, if ETH vol_x_ref climbs back above 1.5 or a second burst arrives. I would also widen on |P_z| above 2.5 with a sharp follow-through move, or on any unscheduled news.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do isolated ETH vol bursts of 3x+ ref that fade within a minute predict a repeat burst in the next 5 minutes?
+
+[123.43s] round 15 @ sim 12:38 UTC (+0 findings, 0 alerts, data age ≤1.86s)
+VIEW: BTC reversed the prior rally with a -22.7 bps drop over a 28.8 bps range, but current vol is 0.9x and the peak was only 1.4x, so the move looks orderly rather than disorderly. ETH (1.33x now, peak 2.0x) and SOL (1.21x, peak 1.8x) had brief bursts that are fading. All P_z values are within noise and nothing is scheduled, so I don't expect sustained 1.5x vol over the next 5 minutes.
+RISK: I would widen ETH or SOL if current vol_x_ref holds at 1.5x or above. I would widen BTC if its selloff extends with vol_x_ref above 1.5x or |P_z| above 2. Any cross-asset P_z break past ±2 together with a large move_z would also change my stance.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there an unscheduled news or liquidation catalyst behind BTC's roughly 23 bps reversal at 12:38, and is ETH's recurring 2-3.7x vol burst pattern tied to a specific venue or large trader?
+
+[132.14s] round 16 @ sim 12:40 UTC (+0 findings, 0 alerts, data age ≤2.88s)
+VIEW: All three symbols have cooled further: BTC is at 0.76x ref, ETH 1.11x and SOL 0.92x. The ETH peak of 2.0x and the SOL peak of 1.6x were brief spikes inside an otherwise orderly minute. P_z stays inside noise everywhere (ETH +1.41 is the highest). With nothing scheduled, there is no basis for expecting 1.5x vol over the next 5 minutes.
+RISK: I would widen ETH/SOL if vol_x_ref holds above 1.5x or |P_z| breaks above 2 alongside a directional move. I would also widen if BTC breaks its recent 29 bps range with expanding vol and pulls the alts along.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do ETH's repeated short 2x vol bursts without matching pressure come from a single large participant's execution pattern, such as a TWAP/iceberg, and does that pattern tend to come before larger moves?
+
+[139.07s] round 17 @ sim 12:43 UTC (+0 findings, 0 alerts, data age ≤2.58s)
+VIEW: Vol has eased further. BTC is at 0.5x ref, ETH 0.78x and SOL 0.56x, and the path peaks (1.4x, 1.5x, 1.2x) were brief and did not persist. ETH's -10 bps drift over two minutes was orderly, with P_z only -0.59 and pressure flat. All P_z readings are inside noise and nothing is scheduled, so I don't expect 1.5x vol in the next 5 minutes.
+RISK: I'd widen if ETH or BTC vol_x_ref holds above 1.5x, if |P_z| moves past 2 with accelerating pressure, or if a sharp directional break of more than 15 bps happens in under a minute.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do ETH's brief 1.5x vol spikes during mild BTC-led drift tend to come before larger ETH moves, or do they mean-revert within minutes?
+
+[145.66s] round 18 @ sim 12:46 UTC (+0 findings, 0 alerts, data age ≤0.51s)
+VIEW: Current vol is subdued: BTC is at 0.46x ref, ETH 1.1x and SOL 0.56x. ETH and SOL path peaks reached 1.8–1.9x, but both were brief and have already faded. BTC's P_z has drifted to -1.78 with negative dP, though it is still inside noise and BTC vol is low. Nothing is scheduled, so I don't expect 1.5x sustained vol in the next 5 minutes.
+RISK: I would widen if BTC P_z breaks below -2.5 with accelerating pressure, if ETH or SOL vol_x_ref holds at 1.5x or above in the next snapshot, or if a disorderly cross-asset move develops.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do brief 1.8–1.9x vol spikes in ETH/SOL without order-flow pressure predict elevated vol over the following 5 minutes, or do they mean-revert?
+
+[152.49s] round 19 @ sim 12:48 UTC (+0 findings, 0 alerts, data age ≤1.09s)
+VIEW: All three drifted lower in an orderly way over the minute (BTC -12.5, ETH -9.0, SOL -36.4 bps), and current vol is low at 0.55–0.58x ref. ETH's 1.9x and SOL's 1.5x peaks were brief and have already faded. SOL's selling is the most persistent (P_z -1.4, move_z -1.9), but it is still within noise and nothing is scheduled.
+RISK: SOL vol holding above 1.5x or |P_z| breaking 2 with accelerating dP would move SOL to widen. A sharp correlated leg down in BTC/ETH with vol above 1.5x would widen all three.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does SOL's lead over BTC/ETH in this correlated drift reflect SOL-specific flow (e.g. liquidations or unlocks) or just higher beta?
+
+[160.13s] round 20 @ sim 12:50 UTC (+0 findings, 0 alerts, data age ≤1.92s)
+VIEW: ETH had the biggest swing this minute, with a 33.7 bps range and a 2.5x vol peak, and finished -11.8 bps. Its current vol is back to 1.07x ref and pressure is mild (P_z 0.93). SOL's 2.1x peak also faded to 0.78x, BTC is quiet at 0.52x, and with no scheduled events the spikes look transient rather than a sustained regime.
+RISK: I would widen ETH (or SOL) if current vol_x_ref rises above about 1.5 again, or |P_z| goes past 2 with a matching move_z. I would also widen if two spikes in a row point to building vol, or if all three symbols move together disorderly.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do ETH's repeated short vol spikes (1.9x, then 2.5x) with no pressure signal come from liquidity gaps or large single prints, and do they predict a sustained vol pickup?
+
+[167.34s] round 21 @ sim 12:53 UTC (+0 findings, 0 alerts, data age ≤0.56s)
+VIEW: All three rallied about 18-23 bps over the two minutes, with no disorder. Vol peaks were modest (BTC 1.3x, ETH 1.6x, SOL 2.1x) and current vol is back near or below reference: BTC 0.56x, ETH 0.67x, SOL 1.46x. Pressure is flat everywhere (|P_z| < 0.5). SOL is the warmest, but it is still just under 1.5x and its move_z of 0.23 is ordinary, so no symbol has a clear case for next-5-minute vol at 1.5x or more.
+
+RISK: I would widen SOL if its vol_x_ref holds above about 1.5x or spikes past 2x again with |P_z| above 2. I would widen any symbol on a sharp disorderly move, such as |move_z| above 3, or a sustained |P_z| above 2.5. I would also widen on any unscheduled headline.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Do repeated SOL vol peaks of about 2x with no scheduled events tend to come before a sustained rise in SOL's realized vol over the next 5-15 minutes?
+
+[175.13s] round 22 @ sim 12:55 UTC (+0 findings, 0 alerts, data age ≤1.76s)
+VIEW: BTC and ETH gave back about 9-12 bps over the minute, an orderly drift lower. Current vol is below reference for BTC (0.53x) and ETH (0.72x), and SOL has cooled from 1.46x to 0.88x. ETH pressure reached P_z -2.0, which is borderline, but vol stayed calm and move_z is ordinary. Nothing points to next-5-minute vol of 1.5x or more, and no event is scheduled.
+RISK: ETH selling pressure building past P_z -3 with vol_x_ref rising above 1.5x. A BTC break with move_z beyond ±3. SOL vol re-accelerating toward 2x.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Does ETH order-flow pressure persisting near P_z -2 for several minutes, with vol low, predict a vol expansion in the next 5 minutes, or does it usually mean-revert?
+
+[184.03s] round 23 @ sim 12:58 UTC (+0 findings, 0 alerts, data age ≤0.54s)
+VIEW: All three drifted lower again over the two minutes. SOL fell the most at -26 bps, but its range was only 28 bps and it peaked at 1.4x vol. ETH briefly hit 1.8x and has already cooled to 0.42x. Current vol is subdued (BTC 0.35x, ETH 0.42x, SOL 0.74x), every P_z is inside ±2, and nothing is scheduled, so I don't expect next-5-minute vol of 1.5x.
+RISK: I would widen that symbol if vol_x_ref holds above 1.5x, if |P_z| goes past 2 with accelerating dP alongside a large move_z, or if SOL's steady selling turns into a disorderly break. A fresh ETH spike that persists rather than fading would also count.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is SOL's persistent underperformance versus BTC/ETH (about -26 bps vs about -10 bps) driven by SOL-specific flow such as liquidations or unlocks, or is it just higher beta to the same move?
+
+[193.99s] round 24 @ sim 13:01 UTC (+0 findings, 0 alerts, data age ≤0.44s)
+VIEW: SOL had a 2.6x vol burst and fell another 21 bps, its second straight leg down, with the last chunk at -19.7 bps (move_z -1.44). Its current vol is already back to 1.0x and pressure is neutral (P_z +0.3), so the burst looks absorbed rather than disorderly. BTC (0.56x) and ETH (0.84x) are quiet with flat returns, and nothing is scheduled, so I don't expect next-5-minute vol of 1.5x on any symbol.
+RISK: I would widen SOL if its vol_x_ref climbs back above 1.5x, if P_z pushes past -2 with a third leg lower, or if BTC or ETH start following SOL down with rising vol.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there SOL-specific news, such as a large unlock, a liquidation cluster or an exchange outflow, behind its repeated underperformance over the last 4 minutes?
+
+[201.01s] round 25 @ sim 13:04 UTC (+0 findings, 0 alerts, data age ≤1.38s)
+VIEW: All three are quiet: vol is 0.56-0.71x ref and the window peaks were 0.8x (BTC), 1.2x (ETH) and 1.0x (SOL). SOL bounced +11.3 bps over a 35 bps range after its prior burst, and that rebound settled orderly rather than continuing as a disorderly move. Pressure is ordinary noise everywhere (|P_z| ≤ 1.2) and nothing is scheduled, so I don't expect 1.5x vol in the next 5 minutes.
+RISK: I would widen a symbol if vol_x_ref rose back above ~1.5x, especially a renewed SOL burst, or if |P_z| moved past 2 with an accelerating dP. I would flatten on a sharp cross-asset move of 3x vol or more.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: After an isolated SOL vol burst of 2.5x or more, does vol typically cluster again within 5-10 minutes, or is it usually absorbed once the bounce prints?
+
+[208.04s] round 26 @ sim 13:06 UTC (+0 findings, 0 alerts, data age ≤2.40s)
+VIEW: Still quiet. Vol is 0.36x ref on BTC, 0.49x on ETH and 1.07x on SOL, and the window peaks were 1.1x, 1.4x and 1.3x. SOL's 26.8 bps range is narrower than its prior 35 bps and it ended flat (+0.4 bps), while ETH's -4.8 bps drift was orderly. Pressure is noise everywhere (|P_z| ≤ 0.7) and nothing is scheduled, so I don't expect 1.5x vol in the next 5 minutes.
+RISK: I would widen that symbol if SOL's or ETH's vol_x_ref held above 1.5x, if |P_z| rose past 2 with a matching directional move_z, or if an unscheduled headline crossed.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's recurring 1.3x vol bursts with flat pressure come from liquidation cascades or spot-perp basis arbitrage, and do they lead BTC/ETH?
+
+[215.18s] round 27 @ sim 13:09 UTC (+0 findings, 1 alerts, data age ≤0.43s)
+VIEW: SOL broke lower, down 28 bps in 60s (move_z -2.0). Its vol is still 2.65x ref after peaking at 4.5x, so the move is disorderly and in progress. Pressure is neutral (P_z +0.1), which means this isn't a flow-driven trend, but elevated realized vol tends to persist over a 5-minute horizon. BTC (0.42x) and ETH (0.46x) are quiet and haven't followed, so this looks SOL-specific.
+RISK: I would go back to normal on SOL if its vol falls below about 1.5x ref and the range holds. I would move SOL to flatten if it makes another leg down of 20+ bps or |P_z| goes above 2. I would widen BTC or ETH if they start following SOL, with vol above 1.5x or a sharp move.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: Is there SOL-specific news (an outage, a large unlock, or exchange liquidations) behind the 13:09 drop of 28 bps in 60s?
+
+[223.09s] round 28 @ sim 13:11 UTC (+0 findings, 0 alerts, data age ≤1.56s)
+VIEW: SOL's disorder has faded. Vol peaked at 2.7x early in the window but is now 0.76x ref, and the last chunk was a modest +7.5 bps rebound (move_z 0.55) with neutral pressure (P_z +0.3). BTC (0.4x) and ETH (0.49x, peak 1.46x) remain quiet with no flow signal, and no events are scheduled. Nothing points to 1.5x+ vol over the next 5 minutes, so SOL goes back to normal.
+RISK: I would widen SOL again if its vol_x_ref climbs back above about 1.5x or it breaks to a new low past the earlier drop with |move_z| above 2. I would widen any symbol whose |P_z| moves above 2 alongside rising vol, or if BTC or ETH start to follow SOL lower.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was the earlier 28 bps SOL drop tied to a SOL-specific catalyst, such as a large liquidation, unlock or exchange flow, and is any follow-up flow pending?
+
+[230.03s] round 29 @ sim 13:14 UTC (+0 findings, 0 alerts, data age ≤0.46s)
+VIEW: Everything is quiet now, with current vol at 0.35-0.4x ref on all three. ETH and SOL each touched about 1.5x briefly in the window, but both have fallen back. SOL's +21.8 bps drift over the window was orderly with mild positive pressure (P_z ≤ 1.2), and BTC and ETH flow is just noise (|P_z| < 1). No events are scheduled, so nothing points to 1.5x+ vol in the next 5 minutes.
+RISK: I would widen the affected symbol if vol_x_ref goes back above ~1.5x on a sustained basis, if |P_z| rises past 2-3 alongside a directional break (e.g. SOL extending its rally with accelerating pressure), or if unscheduled headline news hits.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Do SOL's repeated short vol bursts (2.7x, then 1.5x) cluster around particular venues or liquidation levels that could predict the next one?
+
+[236.46s] round 30 @ sim 13:16 UTC (+0 findings, 1 alerts, data age ≤1.40s)
+VIEW: SOL vol is now 3.0x ref and peaked at 3.6x, with a 28 bps range and a -13.5 bps drop in the last 60s, up from about 0.4x last round. That is a disorderly move in progress even though pressure is not extreme (P_z -0.45). BTC (0.45x) and ETH (0.54x) are still quiet, and BTC's +17 bps drift was orderly with P_z only 0.7.
+RISK: I would flatten SOL if its vol goes above 4x or |P_z| breaks 2 with a continued one-way move, and return it to normal if vol drops back under about 1.2x. I would widen BTC or ETH if the SOL move spills over into vol above 1.5x on either.
+STANCE: btc=normal eth=normal sol=widen
+RESEARCH: Is there SOL-specific news or a large liquidation or unlock around 13:16 UTC that explains the isolated vol spike?
+
+[244.91s] round 31 @ sim 13:18 UTC (+0 findings, 0 alerts, data age ≤1.82s)
+VIEW: SOL's spike has faded. Current vol is 0.63x ref and the latest chunk peaked at only 1.47x, though the minute peaked at 3.0x with a 37 bps range and -14.8 bps net. The latest chunk retraced +14 bps with calm pressure (P_z 0.63), so the move looks done rather than still disorderly. BTC (0.38x) and ETH (0.44x) are quiet, with orderly upward drift and P_z at about 1.5, inside noise.
+
+RISK: I would widen SOL again if its vol_x_ref goes back above 1.5x or it breaks a new low past the earlier drop. I would widen BTC or ETH if |P_z| holds above 2 while vol rises, or if all three show a joint dislocation.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Was SOL's -15 bps spike-and-retrace caused by a single liquidation or a large taker sweep on one venue, and do such events tend to cluster within the next 15 minutes?
+
+[252.08s] round 32 @ sim 13:21 UTC (+0 findings, 0 alerts, data age ≤1.27s)
+VIEW: BTC (0.52x) and ETH (0.46x) are still quiet, drifting up in an orderly way with P_z near 1, which is inside noise. SOL is the only name above reference at 1.32x, peaking at 1.8x over the window on a 21.7 bps range. That is still below the 1.5x sustained threshold, it has no directional pressure (P_z -0.43), and it is a fading echo of the earlier spike. No scheduled events today, so I see no reason to expect next-5-minute vol of 1.5x or more anywhere.
+
+RISK: I would widen SOL if its vol_x_ref holds above 1.5x or |P_z| breaks above 2 with a one-directional move. I would widen BTC or ETH if vol_x_ref climbs above 1.5x or a disorderly move starts.
+
+STANCE: btc=normal eth=normal sol=normal
+
+RESEARCH: Is SOL's recurring vol burst at 1.8–3x, with BTC and ETH staying calm, being driven by SOL-specific flow such as liquidations, an unlock, or ecosystem news?
+
+[261.84s] round 33 @ sim 13:23 UTC (+0 findings, 0 alerts, data age ≤2.43s)
+VIEW: BTC moved from quiet (0.52x) to a 2.1x vol peak, rallying +18.5 bps over a 27.9 bps range, and ETH followed with +18.7 bps and a 1.5x peak. Both have already cooled: BTC is at 1.32x and ETH at 0.79x, and pressure stayed inside noise throughout (BTC P_z ≤0.4, ETH ≤1.4). That points to an orderly repricing that is fading, not a disorderly move. SOL calmed further to 0.52x, and with no scheduled events I don't expect next-5-minute vol of 1.5x or more in any name.
+RISK: I would widen BTC (and ETH if it joins) if BTC vol_x_ref climbs back above 1.5x, or if |P_z| breaks above 2 with accelerating dP, which would show the rally turning into one-sided flow. A second leg with move_z above 2 would also do it.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Was there an unscheduled headline or a large spot or ETF flow around 13:23 UTC behind the joint BTC/ETH +18 bps move, and do similar co-moves tend to bring follow-through vol within 5–10 minutes?
+
+[270.23s] round 34 @ sim 13:27 UTC (+0 findings, 0 alerts, data age ≤0.18s)
+VIEW: All three names had vol peaks of 1.6-1.7x mid-window and gave back the earlier rally (BTC -10.8, ETH -12.7, SOL -7.3 bps) on 35-42 bps ranges. They have now settled: BTC is at 0.71x, ETH at 0.69x and SOL at 1.35x. Pressure stayed in noise apart from a brief SOL dip to P_z -2.3, which has reverted to +0.5. With no scheduled events, these look like orderly two-way swings, and I don't expect next-5-minute vol of 1.5x or more.
+RISK: I would widen any name whose vol_x_ref climbs back above about 1.5x with |P_z| above 2 in the same direction, with SOL the most likely since it is already at 1.35x. I would also widen if a renewed cross-asset move breaks the 13:25-13:28 range on accelerating pressure.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is there a news or flow catalyst, such as a large liquidation cluster or an ETF flow print, behind the roughly 13:20 rally and its retrace across all three names?
+
+[276.82s] round 35 @ sim 13:29 UTC (+0 findings, 0 alerts, data age ≤2.57s)
+VIEW: The market calmed further. Current vol is 0.43-0.54x ref on all three names, and the window peaks were only 0.9-1.3x, below the earlier 1.6-1.7x spikes. Pressure is pure noise (|P_z| ≤ 1.2), and SOL's -8.7 bps drift on a 23.6 bps range is orderly. With no scheduled events, nothing points to next-5-minute vol of 1.5x or more.
+RISK: I would widen the affected name on a vol_x_ref jump above 1.5x, a sustained |P_z| above 2 with accelerating dP, or an unscheduled headline. SOL is the most likely to be first, given its persistent negative pressure slope.
+STANCE: btc=normal eth=normal sol=normal
+RESEARCH: Is the 13:30 UTC hour historically associated with US-open-adjacent vol bursts in crypto perps even on days with no scheduled releases?
+
+=== rounds ===
+ round   at_s  llm_s sim_utc  data_age_s  new_findings  alerts    btc    eth    sol
+     0   8.61   6.15   12:00        1.00             0       0 normal normal normal
+     1  19.23   9.59   12:02        2.16             0       0  widen  widen  widen
+     2  28.21   7.98   12:06        0.75             3       1 normal normal  widen
+     3  37.06   7.85   12:09        0.72             1       0 normal normal  widen
+     4  45.62   7.56   12:12        0.57             2       0 normal normal normal
+     5  54.44   7.82   12:15        0.13             0       0 normal normal normal
+     6  61.38   5.94   12:17        2.94             1       0 normal normal normal
+     7  68.25   5.86   12:20        0.88             0       0 normal normal normal
+     8  75.43   6.18   12:22        1.73             0       0 normal normal normal
+     9  82.77   6.33   12:24        2.92             0       0 normal normal normal
+    10  89.15   5.38   12:27        1.25             0       0 normal normal normal
+    11  96.02   5.87   12:29        1.63             0       0 normal normal normal
+    12 102.75   5.73   12:31        2.49             0       0 normal normal normal
+    13 110.21   6.46   12:34        0.22             0       0 normal normal normal
+    14 116.40   5.18   12:36        1.68             0       1 normal normal normal
+    15 123.43   6.03   12:38        1.86             0       0 normal normal normal
+    16 132.14   7.71   12:40        2.88             0       0 normal normal normal
+    17 139.07   5.93   12:43        2.58             0       0 normal normal normal
+    18 145.65   5.58   12:46        0.51             0       0 normal normal normal
+    19 152.49   5.84   12:48        1.09             0       0 normal normal normal
+    20 160.13   6.64   12:50        1.92             0       0 normal normal normal
+    21 167.34   6.21   12:53        0.56             0       0 normal normal normal
+    22 175.13   6.79   12:55        1.76             0       0 normal normal normal
+    23 184.03   7.90   12:58        0.54             0       0 normal normal normal
+    24 193.99   8.95   13:01        0.44             0       0 normal normal normal
+    25 201.01   6.02   13:04        1.38             0       0 normal normal normal
+    26 208.04   6.03   13:06        2.40             0       0 normal normal normal
+    27 215.18   6.13   13:09        0.43             0       1 normal normal  widen
+    28 223.09   6.91   13:11        1.56             0       0 normal normal normal
+    29 230.03   5.94   13:14        0.46             0       0 normal normal normal
+    30 236.46   5.43   13:16        1.40             0       1 normal normal  widen
+    31 244.91   7.45   13:18        1.82             0       0 normal normal normal
+    32 252.08   6.17   13:21        1.27             0       0 normal normal normal
+    33 261.84   8.75   13:23        2.43             0       0 normal normal normal
+    34 270.23   7.39   13:27        0.18             0       0 normal normal normal
+    35 276.82   5.60   13:29        2.57             0       0 normal normal normal
+
+=== did the stance anticipate risk? (next 5 sim-min after it arrived; risky = fwd vol >= 1.5x ref) ===
+       fwd_vol_x_ref       fwd_max_move_bps      
+                mean count             mean count
+stance                                           
+normal          0.83   101            24.92   101
+widen           0.89     7            33.24     7
+risky windows: 1 of 108
+  analyst  caught 0, missed 1, cautious-but-quiet 7  (recall 0%, precision 0%)
+  rule     caught 0, missed 1, cautious-but-quiet 5  (recall 0%, precision 0%)
+decision lag (sim seconds from data to stance): median 120s, max 180s
+saved runs/2024-03-11_110840_{scores,rounds}.csv
+
+first analyst view at 8.6s; research calls 7 (84s agent time); wall 277s
