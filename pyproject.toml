@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rad-agent"
+version = "0.1.0"
+description = "Concurrent data collection + processing for running agents (swarms + Claude)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "swarms>=16,<17",
+    "anthropic>=2.3,<3",
+    "numpy>=2",
+]
+
+[project.optional-dependencies]
+market = ["pandas>=2", "scipy>=1.11"]
+demo = ["pandas>=2", "scipy>=1.11", "matplotlib>=3.8"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["rad*"]
