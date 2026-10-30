@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Batch pipeline vs rad, measured on the CPI demo run</title>
+  <desc id="d">In a batch pipeline the agent waits about 12 seconds for research and makes its first decision at about 16 seconds. With rad, data, research and the agent run at the same time: first decision at 6.0 seconds, then 11.0 seconds, and research lands while the agent keeps working. Processing costs 3.5 microseconds per tick, the fast path decides in 5 microseconds, and there were 0 errors in 132 agent rounds and 24 research calls.</desc>
+  <style>
+    .bg{fill:#fcfcfb}.t1{fill:#0b0b0b}.t2{fill:#52514e}.t3{fill:#8a8984}.grid{stroke:#e1e0d9}.axis{stroke:#c3c2b7}
+    .data{fill:#1baf7a}.research{fill:#eb6834}.agent{fill:#2a78d6}.wait{fill:#e1e0d9}.tile{fill:#f3f2ee}
+    .mark{fill:#0b0b0b}.ring{stroke:#fcfcfb}
+    @media (prefers-color-scheme: dark){
+      .bg{fill:#1a1a19}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.t3{fill:#8f8e86}.grid{stroke:#2c2c2a}.axis{stroke:#383835}
+      .data{fill:#199e70}.research{fill:#d95926}.agent{fill:#3987e5}.wait{fill:#2c2c2a}.tile{fill:#232322}
+      .mark{fill:#f0efec}.ring{stroke:#1a1a19}
+    }
+    text{font-size:13px}.h{font-size:19px;font-weight:700}.lab{font-size:12px}.big{font-size:24px;font-weight:700}.small{font-size:11.5px}
+  </style>
+  <rect class="bg" width="960" height="470" rx="10"/>
+
+  <text class="t1 h" x="32" y="40">The agent never waits for data or research</text>
+  <text class="t2" x="32" y="62">Measured on the CPI demo run (wall-clock seconds; 4 research agents, Claude Opus 5.5 via Claude Code)</text>
+
+  <!-- axis: x = 170 + s*24  (0..30 s) -->
+  <g class="grid" stroke-width="1">
+    <line x1="170" y1="86" x2="170" y2="300"/><line x1="290" y1="86" x2="290" y2="300"/>
+    <line x1="410" y1="86" x2="410" y2="300"/><line x1="530" y1="86" x2="530" y2="300"/>
+    <line x1="650" y1="86" x2="650" y2="300"/><line x1="770" y1="86" x2="770" y2="300"/>
+    <line x1="890" y1="86" x2="890" y2="300"/>
+  </g>
+  <g class="t3 small" text-anchor="middle">
+    <text x="170" y="318">0 s</text><text x="290" y="318">5</text><text x="410" y="318">10</text>
+    <text x="530" y="318">15</text><text x="650" y="318">20</text><text x="770" y="318">25</text><text x="890" y="318">30</text>
+  </g>
+
+  <!-- Batch pipeline -->
+  <text class="t1" x="32" y="104" font-weight="700">Batch</text>
+  <text class="t3 small" x="32" y="121">(estimated)</text>
+  <text class="t2 lab" x="160" y="103" text-anchor="end">research</text>
+  <rect class="research" x="170" y="91" width="288" height="16" rx="4"/>
+  <text class="t2 lab" x="160" y="127" text-anchor="end">data</text>
+  <rect class="wait" x="170" y="115" width="288" height="16" rx="4"/>
+  <text class="t2 small" x="178" y="127">feed waits (≈4 min of market time goes stale)</text>
+  <rect class="data" x="460" y="115" width="430" height="16" rx="4"/>
+  <text class="t2 lab" x="160" y="151" text-anchor="end">agent</text>
+  <rect class="agent" x="460" y="139" width="94" height="16" rx="4"/>
+  <circle class="mark ring" cx="556" cy="147" r="6" stroke-width="2"/>
+  <text class="t1 lab" x="566" y="151">first decision ≈16 s</text>
+
+  <!-- rad -->
+  <text class="t1" x="32" y="204" font-weight="700">rad</text>
+  <text class="t3 small" x="32" y="221">(measured)</text>
+  <text class="t2 lab" x="160" y="191" text-anchor="end">data</text>
+  <rect class="data" x="170" y="179" width="720" height="16" rx="4"/>
+  <text class="t2 lab" x="160" y="215" text-anchor="end">research</text>
+  <rect class="research" x="170" y="203" width="288" height="16" rx="4"/>
+  <text class="t2 small" x="466" y="215">findings posted as each lands</text>
+  <text class="t2 lab" x="160" y="239" text-anchor="end">agent</text>
+  <rect class="agent" x="224" y="227" width="89" height="16" rx="4"/>
+  <rect class="agent" x="339" y="227" width="94" height="16" rx="4"/>
+  <rect class="agent" x="457" y="227" width="352" height="16" rx="4"/>
+  <circle class="mark ring" cx="315" cy="235" r="6" stroke-width="2"/>
+  <circle class="mark ring" cx="433" cy="235" r="6" stroke-width="2"/>
+  <circle class="mark ring" cx="809" cy="235" r="6" stroke-width="2"/>
+  <text class="t1 lab" x="315" y="263" text-anchor="middle">6.0 s</text>
+  <text class="t1 lab" x="433" y="263" text-anchor="middle">11.0 s</text>
+  <text class="t1 lab" x="809" y="263" text-anchor="middle">26.6 s (reads 4 new findings)</text>
+  <text class="t2 lab" x="160" y="287" text-anchor="end">fast path</text>
+  <g class="agent">
+    <rect x="170" y="279" width="2" height="12"/><rect x="206" y="279" width="2" height="12"/><rect x="242" y="279" width="2" height="12"/>
+    <rect x="278" y="279" width="2" height="12"/><rect x="314" y="279" width="2" height="12"/><rect x="350" y="279" width="2" height="12"/>
+    <rect x="386" y="279" width="2" height="12"/><rect x="422" y="279" width="2" height="12"/><rect x="458" y="279" width="2" height="12"/>
+    <rect x="494" y="279" width="2" height="12"/><rect x="530" y="279" width="2" height="12"/><rect x="566" y="279" width="2" height="12"/>
+    <rect x="602" y="279" width="2" height="12"/><rect x="638" y="279" width="2" height="12"/><rect x="674" y="279" width="2" height="12"/>
+    <rect x="710" y="279" width="2" height="12"/><rect x="746" y="279" width="2" height="12"/><rect x="782" y="279" width="2" height="12"/>
+    <rect x="818" y="279" width="2" height="12"/><rect x="854" y="279" width="2" height="12"/><rect x="888" y="279" width="2" height="12"/>
+  </g>
+  <text class="t3 small" x="160" y="303" text-anchor="end">rule, every update</text>
+
+  <!-- tiles -->
+  <g>
+    <rect class="tile" x="32" y="344" width="208" height="98" rx="8"/>
+    <text class="t1 big" x="48" y="380">3.5 µs</text>
+    <text class="t2 lab" x="48" y="402">processing per tick</text>
+    <text class="t3 small" x="48" y="422">≈280k ticks/s per core</text>
+
+    <rect class="tile" x="256" y="344" width="208" height="98" rx="8"/>
+    <text class="t1 big" x="272" y="380">5 µs</text>
+    <text class="t2 lab" x="272" y="402">fast-path decision (p50)</text>
+    <text class="t3 small" x="272" y="422">p99 under 30 µs</text>
+
+    <rect class="tile" x="480" y="344" width="208" height="98" rx="8"/>
+    <text class="t1 big" x="496" y="380">6.0 s</text>
+    <text class="t2 lab" x="496" y="402">to first agent decision</text>
+    <text class="t3 small" x="496" y="422">vs ≈16 s batch</text>
+
+    <rect class="tile" x="704" y="344" width="224" height="98" rx="8"/>
+    <text class="t1 big" x="720" y="380">0 errors</text>
+    <text class="t2 lab" x="720" y="402">in 132 agent rounds</text>
+    <text class="t3 small" x="720" y="422">and 24 research calls, 3 live runs</text>
+  </g>
+</svg>
